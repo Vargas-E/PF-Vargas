@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url("../assets/images/background_final.jpg");
+    width: 100%;
+    font-family: "Lato";
+    z-index: 0;
+}
+
+
+.primaryImageContainer {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-style: italic;
+}
+
+.centerImageText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centerImage {
+    width: 100vw;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+
+.homeBody {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* intro home */
+.sectionHomeIntro {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    background-color: #D2B48C;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+}
+
+.sectionHomePicture {
+    width: 50%;
+    object-fit: fill;
+    border-radius: 0 10px 10px 0
+}
+
+.sectionHomeText {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem 0 1rem;
+}
+
+/*home coffees text*/
+
+.coffeeTypesText {
+    background-color: #D2B48C;
+    margin: 2rem 0 2rem 0;
+    padding: 2rem;
+    font-size: 22px;
+}
+
+.coffeeList {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.seeMoreCoffee {
+    display: flex;
+    right: 0;
+    justify-content: flex-end;
+    margin: 1rem 0 0 0
+}
+
+.coffeeButton {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0.5rem;
+    background-color: #1E1E1E;
+    color: #f2f2f2;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.coffeeButtonProductsPage {
+    margin-top: 5px;
+    width: 100%
+}
+
+.productType {
+    display: flex;
+    justify-content: center;
+}
+
+.coffeeCard {
+    width: 200px;
+    margin: 1.5rem;
+}
+
+.coffeeImage {
+    width: 200px;
+    object-fit: cover;
+    display: inline-block;
+}
+
+.coffeeDesc {
+    padding: 1rem;
+    background-color: #D2B48C;
+}
+
+.coffeeProductsContainer {
+    display: "flex";
+    flex-direction: "row"
+}
+
+
+.midScreen {
+    display: none;
+}
+
+.mobile {
+    display: none;
+}
+
+/*footer stuff*/
+
+.footer {
+    padding: 4rem 0 1rem 0;
+    background-color: #1E1E1E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.socialLinkIcons {
+    display: flex;
+    flex-direction: row;
+}
+
+footer div a {
+    width: 30px;
+    margin: 10px;
+}
+
+/*contact form*/
+
+.introText {
+    margin-top: 1rem
+}
+
+.contactFormContainer {
+    display: flex;
+    background-color: #D2B48C;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contactFormInputs {
+
+    padding: 2rem 2rem 0 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+}
+
+.submitMailContainer {
+    width: 100%;
+    padding: 2rem 2rem 1rem 2rem;
+    display: flex;
+    justify-content: end;
+    margin: auto;
+}
+
+/*about us*/
+
+.aboutUsTextContainer {
+    padding: 2rem;
+    background-color: #D2B48C;
+    margin: 1rem;
+    font-size: 20px;
+}
+
+.signature {
+    display: flex;
+    justify-content: end;
+}
+
+/* services */
+
+.servicesCardsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2rem 0 2rem 0;
+}
+
+.serviceCard {
+    background-color: #D2B48C;
+    width: 30%;
+    height: 600px;
+}
+
+.serviceCardImg {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.serviceCardText {
+    padding: 2rem;
+}
+
+.float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #1E1E1E;
+    color: #FFF;
+    border-radius: 50px;
+    border: 1px solid #D2B48C;
+    text-align: center;
+    text-decoration: none;
+    font-size: 40px;
+
+}
+
+.float:hover .tooltipText {
+    visibility: visible;
+
+}
+
+a div {
+    padding-top: 0.5rem;
+}
+
+.tooltipText {
+    font-weight: bold;
+    font-size: 10px;
+    visibility: hidden;
+    position: fixed;
+    bottom: 105px;
+    right: 20px;
+    width: 100px;
+    background-color: #1E1E1E;
+    color: #D2B48C;
+    text-align: center;
+    padding: 5px 0;
+    z-index: 1;
+}
+
+
+/* bootstrap */
+
+.navbar {
+    --bs-navbar-padding-x: 1rem;
+    width: 100vw;
+}
+
+.carousel {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    /* background-color: #D2B48C; */
+}
+
+.carousel-item {
+    display: none;
+}
+
+.carousel-item.active {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.carousel-item-next {
+    display: flex;
+    flex-direction: row;
+}
+
+.carousel-item-prev {
+    display: flex;
+    flex-direction: row;
+}
+
+.carousel-item.end {
+    display: flex;
+    flex-direction: row;
+}
+
+.carousel-control-next {
+    background-color: #D2B48C;
+    border-radius: 5px;
+    width: 5%;
+
+}
+
+.carousel-control-prev {
+    background-color: #D2B48C;
+    border-radius: 5px;
+    width: 5%;
+}
+
+
+
+.navbar-dark {
+    --bs-navbar-hover-color: #bd1d15;
+}
+
+.navbar-expand-md .navbar-collapse {
+    justify-content: flex-end;
+}
+
+
+/*mediaqueries*/
+
+@media (max-width: 1000px) {
+    body {
+        font-size: 12px;
+    }
+
+    .sectionHomeIntro {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: #D2B48C;
+        margin-bottom: 1rem;
+    }
+
+    .sectionHomePicture {
+        width: 100%;
+        height: 300px;
+        margin: 0;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0
+    }
+
+    .sectionHomeText {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .midScreen {
+        display: flex
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    .midScreen {
+        display: none;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+    }
+}
