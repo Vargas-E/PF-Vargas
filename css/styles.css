@@ -233,24 +233,28 @@ body {
 .servicesCardsContainer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 2rem 0 2rem 0;
 }
 
 .serviceCard {
+    display: flex;
+    flex-direction: column;
     background-color: #D2B48C;
     width: 30%;
-    height: 600px;
+    border-radius: 5px;
 }
 
 .serviceCardImg {
     width: 100%;
     height: 260px;
     object-fit: cover;
+    border-radius: 5px 5px 0 0;
 }
 
 .serviceCardText {
     padding: 2rem;
+    border-radius: 0 0 5px 5px;
 }
 
 .float {
@@ -437,4 +441,16 @@ a div {
     .socialLinkIcons {
         width: 60%;
     }
+
+    .servicesCardsContainer {
+        flex-direction: column;
+    }
+    .serviceCard {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+
+    }
+        
+
 }
