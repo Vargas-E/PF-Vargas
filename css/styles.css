@@ -207,7 +207,7 @@ body {
 
 .coffeeProductsContainer {
     display: "flex";
-    flex-direction: "row"
+    flex-direction: "row";
 }
 
 
@@ -529,8 +529,6 @@ a div {
         width: 100%;
         height: 400px;
     }
-
-
 }
 
 @media (max-width: 600px) {
