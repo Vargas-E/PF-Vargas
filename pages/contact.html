@@ -3,32 +3,56 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
     <title>Contact and locations</title>
 </head>
 
 <body>
     <header>
-        <nav>
-            <a class="logo" href="../index.html"><img src="../assets/images/coffee_logo.png"></a>
-                <div class="topnav-right">
-                    <a href="../index.html">Home</a>
-                    <a href="./products.html"> Products</a>
-                    <a href="./services.html">Services</a>
-                    <a href="./about_us.html">About us</a>
-                    <a class="currentNavLink" href="./contact.html">Contact</a>
-                </div>
+
+        <nav class="navbar navbar-dark navbar-expand-md">
+            <a href="../index.html"><img class="logo" src="../assets/images/coffee_logo.png"></a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="../pages/services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/about_us.html">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="../pages/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>
-        <img class="centerImage" src="../assets/images/coffee_central_image.webp" />
+        <div class="primaryImageContainer">
+            <img class="centerImage" src="../assets/images/coffee_central_image.webp" />
+            <div class="centerImageText">The most delicious coffee in town, now just one click away</div>
+
+        </div>
         <div class="homeBody">
-            <h2 class="introText">You can contact us to ask more information about our products and services by mail, or come to one of our locations</h2>
+            <h2 class="genericContainer">You can contact us to ask more information about our products and services by mail. We are always at your disposal!</h2>
 
             <!-- <section class="contactFormContainer"> -->
-                <form class="mailForm">
-                    <div >
+            <form class="contactForm">
+                <div>
+                    <div class="contactInputs">
                         <div class="contactFormInputs">
                             <label for="fname">Full name:</label><br>
                             <input type="text" id="fname" name="fname"><br>
@@ -39,16 +63,20 @@
                             <label for="msg">Message:</label><br>
                             <textarea type="text" id="msg" name="msg" rows="15" cols="50"></textarea>
                         </div>
+    
                     </div>
                     <div class="submitMailContainer">
                         <input class="coffeeButton" type="submit" value="Submit">
                     </div>
-                </form>
+                </div>
+
+
+            </form>
             <!-- </section> -->
 
 
-            <h2>Our locations:</h2>
-            <section class="sectionHomeIntro">
+            <h2 class="genericContainer">Or you can visit as and enjoy a coffee with us!</h2>
+            <section class="sectionHomeIntro sectionHomeAddOnContact">
                 <div class="sectionHomeText">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus convallis facilisis malesuada.
@@ -68,7 +96,7 @@
                 </div>
                 <img class="sectionHomePicture" src="../assets/images/locations/location1.webp" />
             </section>
-            <section class="sectionHomeIntro">
+            <section class="sectionHomeIntro sectionHomeAddOnContact">
                 <div class="sectionHomeText">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus convallis facilisis malesuada.
@@ -88,7 +116,7 @@
                 </div>
                 <img class="sectionHomePicture" src="../assets/images/locations/location2.jpg" />
             </section>
-            <section class="sectionHomeIntro">
+            <section class="sectionHomeIntro sectionHomeAddOnContact">
                 <div class="sectionHomeText">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus convallis facilisis malesuada.
@@ -110,11 +138,11 @@
             </section>
         </div>
         <a href="#" class="float">
-            <div >
+            <div>
                 ^
                 <span class="tooltipText">GO TO TOP</span>
-            </div> 
-    </a>
+            </div>
+        </a>
     </main>
     <footer class="footer">
         <div class="socialLinkIcons">
@@ -148,6 +176,9 @@
             @2023 Vargas Iván Ezequiel
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
