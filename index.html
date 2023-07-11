@@ -15,7 +15,7 @@
     <header>
 
         <nav class="navbar navbar-dark navbar-expand-md">
-            <a  href="./index.html"><img class="logo"src="./assets/images/coffee_logo.png"></a>
+            <a href="./index.html"><img class="logo" src="./assets/images/coffee_logo.png"></a>
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -66,29 +66,86 @@
                 </div>
                 <img class="sectionHomePicture" src="./assets/images/coffee_shop1.webp" />
             </section>
-            <section class="coffeeTypesText">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus maximus dolor diam, id suscipit
-                    nibh
-                    mollis et. Integer bibendum lectus ultrices diam feugiat, ut eleifend mauris posuere. Sed vel
-                    sagittis
-                    diam. Nulla at libero scelerisque, tincidunt sapien at, euismod ante. Ut mollis in felis vel
-                    efficitur.
-                    Donec venenatis justo in enim varius, vel fringilla mi scelerisque. Donec vel placerat diam. Sed
-                    luctus
-                    porttitor fermentum. Morbi vulputate lectus turpis, a ultrices sapien interdum non. Donec et
-                    sagittis
-                    purus, ac iaculis ligula.
-                </p>
-                <p>
-                    Donec posuere ante ante, vitae euismod metus volutpat sit amet. Etiam nibh tortor, lacinia ac lorem
-                    et,
-                    congue tristique urna. Proin semper felis et turpis vulputate, at accumsan mi semper. Sed porttitor
-                    sagittis ornare. Quisque sed ipsum lorem. Aliquam eu dapibus lacus. Nullam consectetur magna lectus,
-                    et
-                    luctus quam facilisis in. Fusce elit nunc, pretium eu tempor at, rhoncus ut risus.
-                </p>
+
+            <section class="showsContainer">
+                <div class="genericContainer showDesc1 normalizeMarginGrid">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus maximus
+                    dolor diam, id suscipitnibh</div>
+                <div class="genericContainer showDesc2 normalizeMarginGrid">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus maximus
+                    dolor diam, id suscipitnibh</div>
+                <div class="genericContainer showDesc3 normalizeMarginGrid">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus maximus
+                    dolor diam, id suscipitnibh</div>
+                <div class="genericContainer showDesc4 normalizeMarginGrid">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus maximus
+                    dolor diam, id suscipitnibh</div>
+                <div id="carouselBand" class="carousel slide carouselBand" data-bs-ride="carouselBand">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselBand" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselBand" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselBand" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselBand" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                    </div>
+                    <div id="innerBandCarousel" class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="bandImageContainer">
+                                <img class="bandImage" src="./assets/images/coffee_common.webp" />
+                                <p class="bandImageContainerText">1Donec posuere ante ante, vitae euismod metus volutpat sit amet.
+                                    Etiam nibh
+                                    tortor, lacinia ac
+                                    lorem et,congue tristique urna.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item ">
+                            <div class=" bandImageContainer">
+    
+                                <img class="bandImage" src="./assets/images/latte.webp" />
+                                <p class="bandImageContainerText">2Donec posuere ante ante, vitae euismod metus volutpat sit amet.
+                                    Etiam
+                                    nibh
+                                    tortor, lacinia ac
+                                    lorem et,congue tristique urna.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item ">
+                            <div class=" bandImageContainer">
+    
+                                <img class="bandImage" src="./assets/images/latte.webp" />
+                                <p class="bandImageContainerText">3Donec posuere ante ante, vitae euismod metus volutpat sit amet.
+                                    Etiam
+                                    nibh
+                                    tortor, lacinia ac
+                                    lorem et,congue tristique urna.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item ">
+                            <div class=" bandImageContainer">
+    
+                                <img class="bandImage" src="./assets/images/latte.webp" />
+                                <p class="bandImageContainerText">4Donec posuere ante ante, vitae euismod metus volutpat sit amet.
+                                    Etiam
+                                    nibh
+                                    tortor, lacinia ac
+                                    lorem et,congue tristique urna.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselBand"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselBand"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
             </section>
+
             <section class="seeMoreCoffee">
                 <a href="./pages/products.html" class="coffeeButton">See more</a>
             </section>
@@ -260,7 +317,7 @@
                 </button>
             </div>
 
-            <div id="carousel2"  class="carousel midScreen slide" data-bs-ride="carousel2 ">
+            <div id="carousel2" class="carousel midScreen slide" data-bs-ride="carousel2 ">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carousel2" data-bs-slide-to="0" class="active"
                         aria-current="true" aria-label="Slide 1"></button>
@@ -443,27 +500,42 @@
 
             <div id="carousel3" class="carousel mobile slide" data-bs-ride="carousel3 ">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="0" class="active" aria-current="true"
-                        aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="6" aria-label="Slide 7"></button>
-                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="7" aria-label="Slide 8"></button>
-                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="8" aria-label="Slide 9"></button>
-                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="9" aria-label="Slide 10"></button>
-                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="10" aria-label="Slide 11"></button>
-                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="11" aria-label="Slide 12"></button>
-                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="12" aria-label="Slide 13"></button>
-                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="13" aria-label="Slide 14"></button>
-                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="14" aria-label="Slide 15"></button>
-                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="15" aria-label="Slide 16"></button>
-            
+                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="5"
+                        aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="6"
+                        aria-label="Slide 7"></button>
+                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="7"
+                        aria-label="Slide 8"></button>
+                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="8"
+                        aria-label="Slide 9"></button>
+                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="9"
+                        aria-label="Slide 10"></button>
+                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="10"
+                        aria-label="Slide 11"></button>
+                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="11"
+                        aria-label="Slide 12"></button>
+                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="12"
+                        aria-label="Slide 13"></button>
+                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="13"
+                        aria-label="Slide 14"></button>
+                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="14"
+                        aria-label="Slide 15"></button>
+                    <button type="button" data-bs-target="#carousel3" data-bs-slide-to="15"
+                        aria-label="Slide 16"></button>
+
                 </div>
                 <div class="carousel-inner">
-            
+
                     <div class="carousel-item active">
                         <div class=" coffeeCard">
                             <img class="coffeeImage" src="./assets/images/coffee_common.webp" />
@@ -502,7 +574,7 @@
                                 tortor, lacinia ac
                                 lorem et,congue tristique urna.</p>
                         </div>
-            
+
                     </div>
                     <div class="carousel-item">
                         <div class=" coffeeCard">
@@ -515,14 +587,14 @@
                     </div>
                     <div class="carousel-item ">
                         <div class=" coffeeCard">
-            
+
                             <img class="coffeeImage" src="./assets/images/latte.webp" />
                             <p class="coffeeDesc">22Donec posuere ante ante, vitae euismod metus volutpat sit amet.
                                 Etiam
                                 nibh
                                 tortor, lacinia ac
                                 lorem et,congue tristique urna.</p>
-            
+
                         </div>
                     </div>
                     <div class="carousel-item ">
@@ -545,7 +617,7 @@
                                 lorem et,congue tristique urna.</p>
                         </div>
                     </div>
-            
+
                     <div class="carousel-item">
                         <div class=" coffeeCard">
                             <img class="coffeeImage" src="./assets/images/coffee_common.webp" />
@@ -584,7 +656,7 @@
                                 tortor, lacinia ac
                                 lorem et,congue tristique urna.</p>
                         </div>
-            
+
                     </div>
                     <div class="carousel-item">
                         <div class=" coffeeCard">
@@ -597,14 +669,14 @@
                     </div>
                     <div class="carousel-item ">
                         <div class=" coffeeCard">
-            
+
                             <img class="coffeeImage" src="./assets/images/latte.webp" />
                             <p class="coffeeDesc">22Donec posuere ante ante, vitae euismod metus volutpat sit amet.
                                 Etiam
                                 nibh
                                 tortor, lacinia ac
                                 lorem et,congue tristique urna.</p>
-            
+
                         </div>
                     </div>
                     <div class="carousel-item ">
@@ -627,8 +699,8 @@
                                 lorem et,congue tristique urna.</p>
                         </div>
                     </div>
-            
-            
+
+
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -687,14 +759,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-

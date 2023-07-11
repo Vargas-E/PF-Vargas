@@ -75,6 +75,68 @@ body {
     padding: 0 1rem 0 1rem;
 }
 
+.showsContainer {
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    column-gap: 2rem;
+    row-gap: 1rem;
+    grid-template-areas: 
+    "showDesc1 carouselBand"
+    "showDesc2 carouselBand"
+    "showDesc3 carouselBand"
+    "showDesc4 carouselBand"
+}
+
+#carouselBand {
+    margin-bottom: 0;
+}
+
+.showDesc1 {
+    grid-area: showDesc1;
+}
+
+.showDesc2 {
+    grid-area: showDesc2;
+}
+
+.showDesc3 {
+    grid-area: showDesc3;
+}
+
+.showDesc4 {
+    grid-area: showDesc4;
+}
+
+.bandImageContainer {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.bandImageContainerText {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bandImage {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+#innerBandCarousel {
+    width: 100%;
+    height: 500px;
+}
+
+
+
+
 /*home coffees text*/
 
 .coffeeTypesText {
@@ -222,24 +284,6 @@ body {
     border-radius: 5px;
 }
 
-/* .contactFormInputs {
-
-    padding: 2rem 2rem 0 2rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    margin: auto;
-}
-
-.submitMailContainer {
-    width: 100%;
-    padding: 2rem 2rem 1rem 2rem;
-    display: flex;
-    justify-content: end;
-    margin: auto;
-} */
-
 /*about us*/
 
 .aboutUsTextContainer {
@@ -323,6 +367,11 @@ a div {
     z-index: 1;
 }
 
+.normalizeMarginGrid {
+    margin-bottom: 0rem;
+    margin-top: 0rem;
+}
+
 
 /* bootstrap */
 
@@ -395,6 +444,10 @@ a div {
     justify-content: flex-end;
 }
 
+.carouselBand {
+    grid-area: carouselBand;
+    margin-top: 0rem;
+}
 
 /*mediaqueries*/
 
@@ -451,6 +504,33 @@ a div {
     .socialLinkIcons {
         width: 40%;
     }
+
+    .showsContainer {
+        height: 1000px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 2fr repeat(4, 1fr);
+        column-gap: 2rem;
+        row-gap: 1rem;
+        grid-template-areas: 
+        "carouselBand"
+        "showDesc1"
+        "showDesc2"
+        "showDesc3"
+        "showDesc4"
+    }
+
+    .bandImage {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+    
+    #innerBandCarousel {
+        width: 100%;
+        height: 400px;
+    }
+
+
 }
 
 @media (max-width: 600px) {
