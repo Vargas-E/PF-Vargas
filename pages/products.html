@@ -5,225 +5,312 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
     <title>Products</title>
 </head>
 
 <body>
     <header>
-        <nav>
-            <a class="logo" href="../index.html"><img src="../assets/images/coffee_logo.png"></a>
-                <div class="topnav-right">
-                    <a href="../index.html">Home</a>
-                    <a class="currentNavLink" href="./products.html"> Products</a>
-                    <a href="./services.html">Services</a>
-                    <a href="./about_us.html">About us</a>
-                    <a href="./contact.html">Contact</a>
-                </div>
+        <nav class="navbar navbar-dark navbar-expand-md">
+            <a href="../index.html"><img class="logo" src="../assets/images/coffee_logo.png"></a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link disabled" href="../pages/products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="../pages/services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/about_us.html">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main>
-        <img class="centerImage" src="../assets/images/coffee_central_image.webp" />
+        <div class="primaryImageContainer">
+            <img class="centerImage" src="../assets/images/coffee_central_image.webp" />
+            <div class="centerImageText">The most delicious coffee in town, now just one click away</div>
+
+        </div>
         <div class="homeBody">
-            <h2 class="introText">Placeholder text for coffees presentation</h2>
-            <section>
+            <div class="productOptionsFormContainer">
+                <form class="productsForm">
+                    <div class="formItems">
+                        <div>
+                            <h4>Purchase options:</h4>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="sour" name="sour" value="sour">
+                            <label for="sour">Filter by sour beverages</label><br>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="sweet" name="sweet" value="sweet">
+                            <label for="sweet">Filter by sweet beverages</label><br>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="premium" name="premium" value="premium">
+                            <label for="premium">Filter by premium beverages</label>
+                        </div>
+                        <br/>
+
+
+                        <div>
+                            <label for="lang">Order by:</label>
+                            <select name="order" id="productsOrder">
+                                <option value="byPriceUp">Price (higher price first)</option>
+                                <option value="byPriceDown">Precio (lower price first)</option>
+                                <option value="byPopular">By popularity</option>
+                            </select>
+                        </div>
+                        <div>
+                            <b>Hoy many?</b>
+                        </div>
+                        <div class="sliderContainer">
+                            <input type="range" min="1" max="20" value="1" class="slider" id="productsSlider">
+                        </div>
+                        <a class="finishProducts coffeeButton buttonLink " href="#openModal">Finish purchase</a>
+
+                    </div>
+
+                </form>
                 <div class="coffeeList">
-                    <span class="coffeeCard">
+                    <span class="coffeeCard fixMargin">
                         <img class="coffeeImage" src="../assets/images/coffee_common.webp" />
                         <p class="coffeeDesc">Donec posuere ante ante, vitae euismod metus volutpat sit amet. Etiam nibh
                             tortor, lacinia ac
                             lorem et,congue tristique urna.</p>
-                            <div class="productType">
-                                <button class="coffeeButton coffeeButtonProductsPage">Order it now!</button>
-                            </div>
+                        <div class="productType">
+                            <button class="coffeeButton coffeeButtonProductsPage">Add to cart</button>
+                        </div>
                     </span>
-                    <span class="coffeeCard">
+                    <span class="coffeeCard fixMargin">
                         <img class="coffeeImage" src="../assets/images/latte.webp" />
                         <p class="coffeeDesc">Donec posuere ante ante, vitae euismod metus volutpat sit amet. Etiam nibh
                             tortor, lacinia ac
                             lorem et,congue tristique urna.</p>
-                            <div class="productType">
-                                <button class="coffeeButton coffeeButtonProductsPage">Order it now!</button>
-                            </div>
+                        <div class="productType">
+                            <button class="coffeeButton coffeeButtonProductsPage">Add to cart</button>
+                        </div>
                     </span>
-                    <span class="coffeeCard">
+                    <span class="coffeeCard fixMargin">
                         <img class="coffeeImage" src="../assets/images/iced_latte.webp" />
                         <p class="coffeeDesc">Donec posuere ante ante, vitae euismod metus volutpat sit amet. Etiam nibh
                             tortor, lacinia ac
                             lorem et,congue tristique urna.</p>
-                            <div class="productType">
-                                <button class="coffeeButton coffeeButtonProductsPage">Order it now!</button>
-                            </div>
+                        <div class="productType">
+                            <button class="coffeeButton coffeeButtonProductsPage">Add to cart</button>
+                        </div>
                     </span>
-                    <span class="coffeeCard coffeeCardLast">
+                    <span class="coffeeCard fixMargin coffeeCard fixMarginLast">
                         <img class="coffeeImage" src="../assets/images/capuccinno.webp" />
                         <p class="coffeeDesc">Donec posuere ante ante, vitae euismod metus volutpat sit amet. Etiam nibh
                             tortor, lacinia ac
                             lorem et,congue tristique urna.</p>
-                            <div class="productType">
-                                <button class="coffeeButton coffeeButtonProductsPage">Order it now!</button>
-                            </div>
+                        <div class="productType">
+                            <button class="coffeeButton coffeeButtonProductsPage">Add to cart</button>
+                        </div>
                     </span>
-                </div>
-
-            </section>
-            <section>
-                <div class="coffeeList">
-                    <span class="coffeeCard">
+                    <span class="coffeeCard fixMargin">
                         <img class="coffeeImage" src="../assets/images/coffee_common.webp" />
                         <p class="coffeeDesc">Donec posuere ante ante, vitae euismod metus volutpat sit amet. Etiam nibh
                             tortor, lacinia ac
                             lorem et,congue tristique urna.</p>
-                            <div class="productType">
-                                <button class="coffeeButton coffeeButtonProductsPage">Order it now!</button>
-                            </div>
+                        <div class="productType">
+                            <button class="coffeeButton coffeeButtonProductsPage">Add to cart</button>
+                        </div>
                     </span>
-                    <span class="coffeeCard">
+                    <span class="coffeeCard fixMargin">
                         <img class="coffeeImage" src="../assets/images/latte.webp" />
                         <p class="coffeeDesc">Donec posuere ante ante, vitae euismod metus volutpat sit amet. Etiam nibh
                             tortor, lacinia ac
                             lorem et,congue tristique urna.</p>
-                            <div class="productType">
-                                <button class="coffeeButton coffeeButtonProductsPage">Order it now!</button>
-                            </div>
+                        <div class="productType">
+                            <button class="coffeeButton coffeeButtonProductsPage">Add to cart</button>
+                        </div>
                     </span>
-                    <span class="coffeeCard">
+                    <span class="coffeeCard fixMargin">
                         <img class="coffeeImage" src="../assets/images/iced_latte.webp" />
                         <p class="coffeeDesc">Donec posuere ante ante, vitae euismod metus volutpat sit amet. Etiam nibh
                             tortor, lacinia ac
                             lorem et,congue tristique urna.</p>
-                            <div class="productType">
-                                <button class="coffeeButton coffeeButtonProductsPage">Order it now!</button>
-                            </div>
+                        <div class="productType">
+                            <button class="coffeeButton coffeeButtonProductsPage">Add to cart</button>
+                        </div>
                     </span>
-                    <span class="coffeeCard coffeeCardLast">
+                    <span class="coffeeCard fixMargin">
                         <img class="coffeeImage" src="../assets/images/capuccinno.webp" />
                         <p class="coffeeDesc">Donec posuere ante ante, vitae euismod metus volutpat sit amet. Etiam nibh
                             tortor, lacinia ac
                             lorem et,congue tristique urna.</p>
-                            <div class="productType">
-                                <button class="coffeeButton coffeeButtonProductsPage">Order it now!</button>
-                            </div>
+                        <div class="productType">
+                            <button class="coffeeButton coffeeButtonProductsPage">Add to cart</button>
+                        </div>
                     </span>
-                </div>
-
-            </section>
-            <section>
-                <div class="coffeeList">
-                    <span class="coffeeCard">
+                    <span class="coffeeCard fixMargin">
                         <img class="coffeeImage" src="../assets/images/coffee_common.webp" />
                         <p class="coffeeDesc">Donec posuere ante ante, vitae euismod metus volutpat sit amet. Etiam nibh
                             tortor, lacinia ac
                             lorem et,congue tristique urna.</p>
-                            <div class="productType">
-                                <button class="coffeeButton coffeeButtonProductsPage">Order it now!</button>
-                            </div>
+                        <div class="productType">
+                            <button class="coffeeButton coffeeButtonProductsPage">Add to cart</button>
+                        </div>
                     </span>
-                    <span class="coffeeCard">
+                    <span class="coffeeCard fixMargin">
                         <img class="coffeeImage" src="../assets/images/latte.webp" />
                         <p class="coffeeDesc">Donec posuere ante ante, vitae euismod metus volutpat sit amet. Etiam nibh
                             tortor, lacinia ac
                             lorem et,congue tristique urna.</p>
-                            <div class="productType">
-                                <button class="coffeeButton coffeeButtonProductsPage">Order it now!</button>
-                            </div>
+                        <div class="productType">
+                            <button class="coffeeButton coffeeButtonProductsPage">Add to cart</button>
+                        </div>
                     </span>
-                    <span class="coffeeCard">
+                    <span class="coffeeCard fixMargin">
                         <img class="coffeeImage" src="../assets/images/iced_latte.webp" />
                         <p class="coffeeDesc">Donec posuere ante ante, vitae euismod metus volutpat sit amet. Etiam nibh
                             tortor, lacinia ac
                             lorem et,congue tristique urna.</p>
-                            <div class="productType">
-                                <button class="coffeeButton coffeeButtonProductsPage">Order it now!</button>
-                            </div>
+                        <div class="productType">
+                            <button class="coffeeButton coffeeButtonProductsPage">Add to cart</button>
+                        </div>
                     </span>
-                    <span class="coffeeCard coffeeCardLast">
+                    <span class="coffeeCard fixMargin">
                         <img class="coffeeImage" src="../assets/images/capuccinno.webp" />
                         <p class="coffeeDesc">Donec posuere ante ante, vitae euismod metus volutpat sit amet. Etiam nibh
                             tortor, lacinia ac
                             lorem et,congue tristique urna.</p>
-                            <div class="productType">
-                                <button class="coffeeButton coffeeButtonProductsPage">Order it now!</button>
-                            </div>
+                        <div class="productType">
+                            <button class="coffeeButton coffeeButtonProductsPage">Add to cart</button>
+                        </div>
                     </span>
-                </div>
-
-            </section>
-            <section>
-                <div class="coffeeList">
-                    <span class="coffeeCard">
+                    <span class="coffeeCard fixMargin">
                         <img class="coffeeImage" src="../assets/images/coffee_common.webp" />
                         <p class="coffeeDesc">Donec posuere ante ante, vitae euismod metus volutpat sit amet. Etiam nibh
                             tortor, lacinia ac
                             lorem et,congue tristique urna.</p>
-                            <div class="productType">
-                                <button class="coffeeButton coffeeButtonProductsPage">Order it now!</button>
-                            </div>
+                        <div class="productType">
+                            <button class="coffeeButton coffeeButtonProductsPage">Add to cart</button>
+                        </div>
                     </span>
-                    <span class="coffeeCard">
+                    <span class="coffeeCard fixMargin">
                         <img class="coffeeImage" src="../assets/images/latte.webp" />
                         <p class="coffeeDesc">Donec posuere ante ante, vitae euismod metus volutpat sit amet. Etiam nibh
                             tortor, lacinia ac
                             lorem et,congue tristique urna.</p>
-                            <div class="productType">
-                                <button class="coffeeButton coffeeButtonProductsPage">Order it now!</button>
-                            </div>
+                        <div class="productType">
+                            <button class="coffeeButton coffeeButtonProductsPage">Add to cart</button>
+                        </div>
                     </span>
-                    <span class="coffeeCard">
+                    <span class="coffeeCard fixMargin">
                         <img class="coffeeImage" src="../assets/images/iced_latte.webp" />
                         <p class="coffeeDesc">Donec posuere ante ante, vitae euismod metus volutpat sit amet. Etiam nibh
                             tortor, lacinia ac
                             lorem et,congue tristique urna.</p>
-                            <div class="productType">
-                                <button class="coffeeButton coffeeButtonProductsPage">Order it now!</button>
-                            </div>
+                        <div class="productType">
+                            <button class="coffeeButton coffeeButtonProductsPage">Add to cart</button>
+                        </div>
                     </span>
-                    <span class="coffeeCard coffeeCardLast">
+                    <span class="coffeeCard fixMargin">
                         <img class="coffeeImage" src="../assets/images/capuccinno.webp" />
                         <p class="coffeeDesc">Donec posuere ante ante, vitae euismod metus volutpat sit amet. Etiam nibh
                             tortor, lacinia ac
                             lorem et,congue tristique urna.</p>
-                            <div class="productType">
-                                <button class="coffeeButton coffeeButtonProductsPage">Order it now!</button>
-                            </div>
+                        <div class="productType">
+                            <button class="coffeeButton coffeeButtonProductsPage">Add to cart</button>
+                        </div>
+                    </span>
+                    <span class="coffeeCard fixMargin">
+                        <img class="coffeeImage" src="../assets/images/coffee_common.webp" />
+                        <p class="coffeeDesc">Donec posuere ante ante, vitae euismod metus volutpat sit amet. Etiam nibh
+                            tortor, lacinia ac
+                            lorem et,congue tristique urna.</p>
+                        <div class="productType">
+                            <button class="coffeeButton coffeeButtonProductsPage">Add to cart</button>
+                        </div>
+                    </span>
+                    <span class="coffeeCard fixMargin">
+                        <img class="coffeeImage" src="../assets/images/latte.webp" />
+                        <p class="coffeeDesc">Donec posuere ante ante, vitae euismod metus volutpat sit amet. Etiam nibh
+                            tortor, lacinia ac
+                            lorem et,congue tristique urna.</p>
+                        <div class="productType">
+                            <button class="coffeeButton coffeeButtonProductsPage">Add to cart</button>
+                        </div>
+                    </span>
+                    <span class="coffeeCard fixMargin">
+                        <img class="coffeeImage" src="../assets/images/iced_latte.webp" />
+                        <p class="coffeeDesc">Donec posuere ante ante, vitae euismod metus volutpat sit amet. Etiam nibh
+                            tortor, lacinia ac
+                            lorem et,congue tristique urna.</p>
+                        <div class="productType">
+                            <button class="coffeeButton coffeeButtonProductsPage">Add to cart</button>
+                        </div>
+                    </span>
+                    <span class="coffeeCard fixMargin">
+                        <img class="coffeeImage" src="../assets/images/capuccinno.webp" />
+                        <p class="coffeeDesc">Donec posuere ante ante, vitae euismod metus volutpat sit amet. Etiam nibh
+                            tortor, lacinia ac
+                            lorem et,congue tristique urna.</p>
+                        <div class="productType">
+                            <button class="coffeeButton coffeeButtonProductsPage">Add to cart</button>
+                        </div>
+                    </span>
+                    <span class="coffeeCard fixMargin">
+                        <img class="coffeeImage" src="../assets/images/coffee_common.webp" />
+                        <p class="coffeeDesc">Donec posuere ante ante, vitae euismod metus volutpat sit amet. Etiam nibh
+                            tortor, lacinia ac
+                            lorem et,congue tristique urna.</p>
+                        <div class="productType">
+                            <button class="coffeeButton coffeeButtonProductsPage">Add to cart</button>
+                        </div>
                     </span>
                 </div>
 
-            </section>
+            </div>
         </div>
         <a href="#" class="float">
-                <div >
-                    ^
-                    <span class="tooltipText">GO TO TOP</span>
-                </div> 
+            <div>
+                ^
+                <span class="tooltipText">GO TO TOP</span>
+            </div>
         </a>
     </main>
     <footer class="footer">
         <div class="socialLinkIcons">
             <div class="socialLinkIcon">
                 <a href="https://www.facebook.com" target="_blank">
-                    <img src="./assets/images/social_media_icons/facebook.svg" />
+                    <img src="../assets/images/social_media_icons/facebook.svg" />
                 </a>
             </div>
             <div class="socialLinkIcon">
                 <a href="https://www.instagram.com" target="_blank">
-                    <img src="./assets/images/social_media_icons/instagram.svg" />
+                    <img src="../assets/images/social_media_icons/instagram.svg" />
                 </a>
             </div>
             <div class="socialLinkIcon">
                 <a href="https://www.linkedin.com" target="_blank">
-                    <img src="./assets/images/social_media_icons/linkedin.svg" />
+                    <img src="../assets/images/social_media_icons/linkedin.svg" />
                 </a>
             </div>
             <div class="socialLinkIcon">
                 <a href="https://www.twitter.com" target="_blank">
-                    <img src="./assets/images/social_media_icons/twitter.svg" />
+                    <img src="../assets/images/social_media_icons/twitter.svg" />
                 </a>
             </div>
             <div class="socialLinkIcon">
                 <a href="https://www.whatsapp.com" target="_blank">
-                    <img src="./assets/images/social_media_icons/whatsapp.svg" />
+                    <img src="../assets/images/social_media_icons/whatsapp.svg" />
                 </a>
             </div>
         </div>
@@ -231,11 +318,17 @@
             @2023 Vargas Iván Ezequiel
         </div>
     </footer>
+    <div id="openModal" class="modalWindow">
+        <div>
+            <h2>Your purchase is complete!</h2>
+            <div>Soon you'll recieve a mail with the details of your purchase. In just a few minutes you'll experience the best coffee in town!</div>
+            <a href="#" title="Close" class="coffeeButton modalButton">Close</a>
+  
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-    crossorigin="anonymous"></script>
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
-
-

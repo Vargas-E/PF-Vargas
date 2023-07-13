@@ -13,7 +13,7 @@ body {
 }
 
 .logo {
-    background-color:#D2B48C;
+    background-color: #D2B48C;
     height: 70px;
 }
 
@@ -82,11 +82,11 @@ body {
     grid-template-rows: repeat(4, 1fr);
     column-gap: 2rem;
     row-gap: 1rem;
-    grid-template-areas: 
-    "showDesc1 carouselBand"
-    "showDesc2 carouselBand"
-    "showDesc3 carouselBand"
-    "showDesc4 carouselBand"
+    grid-template-areas:
+        "showDesc1 carouselBand"
+        "showDesc2 carouselBand"
+        "showDesc3 carouselBand"
+        "showDesc4 carouselBand"
 }
 
 #carouselBand {
@@ -147,11 +147,11 @@ body {
 }
 
 .coffeeList {
-    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 1rem;
+    justify-content: center;
 }
 
 .seeMoreCoffee {
@@ -174,6 +174,7 @@ body {
     color: #f2f2f2;
     vertical-align: middle;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .coffeeButtonProductsPage {
@@ -187,7 +188,7 @@ body {
 }
 
 .coffeeCard {
-    width: 200px;
+    max-width: 200px;
     margin: 1.5rem;
 }
 
@@ -259,7 +260,7 @@ body {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 
 }
 
@@ -372,259 +373,346 @@ a div {
     margin-top: 0rem;
 }
 
+/* products */
 
-/* bootstrap */
-
-.navbar {
-    background-color: #1E1E1E;
-    --bs-navbar-padding-y: 0;
+.productOptionsFormContainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
-.navbar-toggler {
+.productsForm {
+    min-width: 20vw;
+    padding: 1rem;
     margin-right: 1rem;
+    background-color: #D2B48C;
+    height: 50vh;
+    position: sticky;
+    top: 2vh;
+    border-radius: 5px;
 }
 
-.carousel {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    /* background-color: #D2B48C; */
-}
-
-.carousel-item {
-    display: none;
-}
-
-.carousel-item.active {
+.formItems {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.sliderContainer {
+    width: 100%;
+}
+
+.slider {
+    appearance: none;
+    width: 100%;
+    background: #bd1d15;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 5px;
+}
+
+.finishProducts {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    width: 90%;
+}
+
+.buttonLink {
+    display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-}
-
-.carousel-item-next {
-    display: flex;
-    flex-direction: row;
-}
-
-.carousel-item-prev {
-    display: flex;
-    flex-direction: row;
-}
-
-.carousel-item.end {
-    display: flex;
-    flex-direction: row;
-}
-
-.carousel-control-next {
-    background-color: #D2B48C;
-    border-radius: 5px;
-    width: 5%;
-
-}
-
-.carousel-control-prev {
-    background-color: #D2B48C;
-    border-radius: 5px;
-    width: 5%;
 }
 
 
-
-.navbar-dark {
-    --bs-navbar-hover-color: #bd1d15;
-}
-
-.nav-link.disabled {
-    color: #bd1d15;
-}
-
-.navbar-expand-md .navbar-collapse {
-    justify-content: flex-end;
-}
-
-.carouselBand {
-    grid-area: carouselBand;
+.fixMargin {
     margin-top: 0rem;
 }
 
-/*mediaqueries*/
+.modalWindow {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    visibility: hidden;
 
-@media (max-width: 1000px) {
-    body {
-        font-size: 12px;
-    }
-
-    .nav-link {
-        margin-right: 5px !important;
-        --bs-nav-link-padding-x: 5px;
-    }
-
-    .sectionHomeIntro {
-        margin-top: 2rem;
-        display: flex;
-        flex-direction: column-reverse;
+    &:target {
+        margin-top: 5rem;
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+        width: 400px;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 2em;
         background-color: #D2B48C;
+        border: 2px solid black;
+        border-radius: 5px;
+    }
+}
+
+.modalButton {
+    display: flex;
+    position: absolute;
+    bottom: 2rem;
+    width: 80%;
+    justify-content: center;
+}
+
+    /* bootstrap */
+
+    .navbar {
+        background-color: #1E1E1E;
+        --bs-navbar-padding-y: 0;
+    }
+
+    .navbar-toggler {
+        margin-right: 1rem;
+    }
+
+    .carousel {
+        margin-top: 1rem;
         margin-bottom: 1rem;
+        /* background-color: #D2B48C; */
     }
 
-    .sectionHomePicture {
-        width: 100%;
-        height: 300px;
-        margin: 0;
-        object-fit: cover;
-        border-radius: 10px 10px 0 0
+    .carousel-item {
+        display: none;
     }
 
-    .sectionHomeText {
-        width: 100%;
+    .carousel-item.active {
+        display: flex;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
-        padding: 1rem;
+        flex-wrap: wrap;
     }
 
-    .sectionHomeAddOnContact {
-        max-height: 600px;
-        margin-top: 0rem;
-        margin-bottom: 2rem;
-     } 
-
-    .midScreen {
-        display: flex
-    }
-
-    .desktop {
-        display: none;
-    }
-
-    .mobile {
-        display: none;
-    }
-    .socialLinkIcons {
-        width: 40%;
-    }
-
-    .showsContainer {
-        height: 1000px;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: 2fr repeat(4, 1fr);
-        column-gap: 2rem;
-        row-gap: 1rem;
-        grid-template-areas: 
-        "carouselBand"
-        "showDesc1"
-        "showDesc2"
-        "showDesc3"
-        "showDesc4"
-    }
-
-    .bandImage {
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-    }
-    
-    #innerBandCarousel {
-        width: 100%;
-        height: 400px;
-    }
-}
-
-@media (max-width: 600px) {
-    body {
-        font-size: 12px;
-    }
-
-    .midScreen {
-        display: none;
-    }
-
-    .desktop {
-        display: none;
-    }
-
-    .mobile {
+    .carousel-item-next {
         display: flex;
+        flex-direction: row;
     }
 
-    .socialLinkIcons {
-        width: 60%;
+    .carousel-item-prev {
+        display: flex;
+        flex-direction: row;
     }
 
-    .servicesCardsContainer {
-        flex-direction: column;
+    .carousel-item.end {
+        display: flex;
+        flex-direction: row;
     }
-    .serviceCard {
-        width: 100%;
+
+    .carousel-control-next {
+        background-color: #D2B48C;
         border-radius: 5px;
-        margin-bottom: 1rem;
+        width: 5%;
 
     }
 
-    .sectionHomeAddOnContact {
-       max-height: 600px;
-    } 
-
-    .contactForm {
-        flex-direction: column;
-    }
-    
-    .contactInputs {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        flex-wrap:wrap;
-    
+    .carousel-control-prev {
+        background-color: #D2B48C;
+        border-radius: 5px;
+        width: 5%;
     }
 
-    .contactFormInputs {
-        width: 100%;
-    }
-    
-    .submitMailContainer {
-        width: 100%;
-        display: flex;
-        justify-content: end;
+
+
+    .navbar-dark {
+        --bs-navbar-hover-color: #bd1d15;
     }
 
-    h2 {
-        font-size: 16px;
+    .nav-link.disabled {
+        color: #bd1d15;
     }
 
-    /* float */
+    .navbar-expand-md .navbar-collapse {
+        justify-content: flex-end;
+    }
 
-    .float {
-        bottom: 20px;
-        right: 20px;
+    .carouselBand {
+        grid-area: carouselBand;
+        margin-top: 0rem;
     }
-    
-    .float:hover .tooltipText {
-        visibility: visible;
-    
-    }
-    
-    a div {
-        padding-top: 0.5rem;
-    }
-    
-    .tooltipText {
-        font-weight: bold;
-        font-size: 10px;
-        visibility: hidden;
-        position: fixed;
-        bottom: 105px;
-        right: 20px;
-        width: 100px;
-        background-color: #1E1E1E;
-        color: #D2B48C;
-        text-align: center;
-        padding: 5px 0;
-        z-index: 1;
-    }
-    
-    
-        
 
-}
+    /*mediaqueries*/
+
+    @media (max-width: 1000px) {
+        body {
+            font-size: 12px;
+        }
+
+        .nav-link {
+            margin-right: 5px !important;
+            --bs-nav-link-padding-x: 5px;
+        }
+
+        .sectionHomeIntro {
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: column-reverse;
+            background-color: #D2B48C;
+            margin-bottom: 1rem;
+        }
+
+        .sectionHomePicture {
+            width: 100%;
+            height: 300px;
+            margin: 0;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0
+        }
+
+        .sectionHomeText {
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .sectionHomeAddOnContact {
+            max-height: 600px;
+            margin-top: 0rem;
+            margin-bottom: 2rem;
+        }
+
+        .midScreen {
+            display: flex
+        }
+
+        .desktop {
+            display: none;
+        }
+
+        .mobile {
+            display: none;
+        }
+
+        .socialLinkIcons {
+            width: 40%;
+        }
+
+        .showsContainer {
+            height: 1000px;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: 2fr repeat(4, 1fr);
+            column-gap: 2rem;
+            row-gap: 1rem;
+            grid-template-areas:
+                "carouselBand"
+                "showDesc1"
+                "showDesc2"
+                "showDesc3"
+                "showDesc4"
+        }
+
+        .bandImage {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        #innerBandCarousel {
+            width: 100%;
+            height: 400px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        body {
+            font-size: 12px;
+        }
+
+        .midScreen {
+            display: none;
+        }
+
+        .desktop {
+            display: none;
+        }
+
+        .mobile {
+            display: flex;
+        }
+
+        .socialLinkIcons {
+            width: 60%;
+        }
+
+        .servicesCardsContainer {
+            flex-direction: column;
+        }
+
+        .serviceCard {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+
+        }
+
+        .sectionHomeAddOnContact {
+            max-height: 600px;
+        }
+
+        .contactForm {
+            flex-direction: column;
+        }
+
+        .contactInputs {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            flex-wrap: wrap;
+
+        }
+
+        .contactFormInputs {
+            width: 100%;
+        }
+
+        .submitMailContainer {
+            width: 100%;
+            display: flex;
+            justify-content: end;
+        }
+
+        h2 {
+            font-size: 16px;
+        }
+
+        /* float */
+
+        .float {
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .float:hover .tooltipText {
+            visibility: visible;
+
+        }
+
+        a div {
+            padding-top: 0.5rem;
+        }
+
+        .tooltipText {
+            font-weight: bold;
+            font-size: 10px;
+            visibility: hidden;
+            position: fixed;
+            bottom: 105px;
+            right: 20px;
+            width: 100px;
+            background-color: #1E1E1E;
+            color: #D2B48C;
+            text-align: center;
+            padding: 5px 0;
+            z-index: 1;
+        }
+    }
