@@ -211,6 +211,29 @@ body {
     flex-direction: row;
 }
 
+.coffeeListCarousel{
+    display: flex;
+    justify-content: center;
+}
+
+.fixFlex {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#carousel1 {
+    margin: 1rem 0 1rem 0;
+}
+
+#carousel2 {
+    margin: 1rem 0 1rem 0;
+}
+
+#carousel3 {
+    margin: 1rem 0 1rem 0;
+}
+
 
 .midScreen {
     display: none;
@@ -298,6 +321,8 @@ body {
 }
 
 .showImage {
+    width: 100%;
+    height: 100%;
     object-fit:fill;
 }
 
@@ -351,6 +376,10 @@ body {
     max-width: 80%;
     margin-left: 1rem;
 }
+
+audio::-webkit-media-controls-panel {
+    background-color: #bd1d15;
+  }
 
 /* services */
 
@@ -527,38 +556,6 @@ a div {
         margin-right: 1rem;
     }
 
-    .carousel {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    .carousel-item {
-        display: none;
-    }
-
-    .carousel-item.active {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .carousel-item-next {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .carousel-item-prev {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .carousel-item.end {
-        display: flex;
-        flex-direction: row;
-    }
-
     .carousel-control-next {
         background-color: #D2B48C;
         border-radius: 5px;
@@ -570,7 +567,7 @@ a div {
         background-color: #D2B48C;
         border-radius: 5px;
         width: 5%;
-    }
+    } 
 
 
 
