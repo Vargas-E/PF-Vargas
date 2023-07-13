@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Shows</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark navbar-expand-md">
+            <a href="../index.html"><img class="logo" src="../assets/images/coffee_logo.png"></a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="../pages/products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="../pages/services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="../pages/shows.html">Shows</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="primaryImageContainer">
+            <img class="centerImage" src="../assets/images/coffee_central_image.webp" />
+            <div class="centerImageText">The most delicious coffee in town, now just one click away</div>
+
+        </div>
+        <div class="homeBody">
+            <section class="showsPageCarousel">
+                <div id="carouselBand2" class="carousel slide" data-bs-ride="carouselBand">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselBand2" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselBand2" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselBand2" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselBand2" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                    </div>
+                    <div id="innerBandCarousel" class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="showImage" src="../assets/images/coffee_common.webp" />
+                        </div>
+                        <div class="carousel-item ">
+                            <img class="showImage" src="../assets/images/latte.webp" />
+                        </div>
+                        <div class="carousel-item ">
+                            <img class="showImage" src="../assets/images/latte.webp" />
+                        </div>
+                        <div class="carousel-item ">
+                            <img class="showImage" src="../assets/images/latte.webp" />
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselBand2"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselBand2"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+            </section>
+            <section class="showAudioContainer">
+                <div class="showAudioCard">
+                    <div>
+                        Whispering Breezes
+                    </div>
+                    <br />
+                    <div>
+                        01/01/23
+                    </div>
+                    <br />
+
+                    <div>
+                        Dynamic indie band with infectious melodies, irresistible energy, and empowering lyrics. They
+                        captivate audiences with their magnetic charisma and leave a lasting impression with their
+                        uplifting sound.
+                    </div>
+                    <audio controls class="audioControls">
+                        <source src="../assets/audio/royaltyMusic1.mp3" type="audio/ogg">
+                    </audio>
+                </div>
+                <div class="showAudioCard">
+                    <div>
+                        The Midnight Sparrows
+                    </div>
+                    <br />
+
+                    <div>
+                        01/07/23
+                    </div>
+                    <br />
+
+                    <div>
+                        Enchanting indie band with folk-inspired melodies, introspective lyrics, and soul-stirring
+                        vocals. Their music is a captivating journey through emotions, leaving a lasting imprint on
+                        listeners' hearts.
+                    </div>
+                    <audio controls class="audioControls">
+                        <source src="../assets/audio/royaltyMusic2.mp3" type="audio/ogg">
+                    </audio>
+                </div>
+                <div class="showAudioCard">
+                    <div>
+                        Luminary Echoes
+                    </div>
+                    <br />
+
+                    <div>
+                        01/14/23
+                    </div>
+                    <br />
+
+                    <div>
+                        Mesmerizing indie band with ethereal soundscapes, haunting vocals, and introspective lyrics.
+                        Their music invites listeners into a captivating world of introspective wonder.
+                    </div>
+                    <audio controls class="audioControls">
+                        <source src="../assets/audio/royaltyMusic3.mp3" type="audio/ogg">
+                    </audio>
+                </div>
+            </section>
+            <section class="showsInfo">
+                <div class="genericContainer">
+                    <h5>
+                        If you want to check out these bands you can contact us to buy tickets!
+                    </h5>
+                </div>
+            </section>
+        </div>
+
+        <a href="#" class="float">
+            <div>
+                ^
+                <span class="tooltipText">GO TO TOP</span>
+            </div>
+        </a>
+    </main>
+    <footer class="footer">
+        <div class="socialLinkIcons">
+            <div class="socialLinkIcon">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="../assets/images/social_media_icons/facebook.svg" />
+                </a>
+            </div>
+            <div class="socialLinkIcon">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="../assets/images/social_media_icons/instagram.svg" />
+                </a>
+            </div>
+            <div class="socialLinkIcon">
+                <a href="https://www.linkedin.com" target="_blank">
+                    <img src="../assets/images/social_media_icons/linkedin.svg" />
+                </a>
+            </div>
+            <div class="socialLinkIcon">
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="../assets/images/social_media_icons/twitter.svg" />
+                </a>
+            </div>
+            <div class="socialLinkIcon">
+                <a href="https://www.whatsapp.com" target="_blank">
+                    <img src="../assets/images/social_media_icons/whatsapp.svg" />
+                </a>
+            </div>
+        </div>
+        <div class="footerSignature">
+            @2023 Vargas Iván Ezequiel
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

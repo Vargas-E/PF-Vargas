@@ -287,6 +287,26 @@ body {
 
 /*about us*/
 
+.showsPageCarousel{
+    margin: 2rem 0 2rem 0;
+}
+
+#carouselBand2 {
+    margin-top: 0rem;
+    width: 100%;
+}
+
+.showImage {
+    height: 100%;
+    width: 100%;
+    object-fit:contain;
+}
+
+.showsPageCarouselDesc{
+    background-color: #D2B48C;
+
+}
+
 .aboutUsTextContainer {
     padding: 2rem;
     background-color: #D2B48C;
@@ -297,6 +317,33 @@ body {
 .signature {
     display: flex;
     justify-content: end;
+}
+
+.showAudioContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.showAudioCard {
+    position: relative;
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+    background-color:#D2B48C;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    min-height: 400px;
+}
+
+.audioControls {
+    position: absolute;
+    bottom: 2rem;
+    max-width: 90%;
+    left: 1.5rem;
+    right: 0rem;
 }
 
 /* services */
