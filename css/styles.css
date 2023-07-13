@@ -294,13 +294,20 @@ body {
 #carouselBand2 {
     margin-top: 0rem;
     width: 100%;
+
 }
 
 .showImage {
-    height: 100%;
-    width: 100%;
-    object-fit:contain;
+    object-fit:fill;
 }
+
+.centerImageTextShows{
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
+
 
 .showsPageCarouselDesc{
     background-color: #D2B48C;
@@ -341,9 +348,8 @@ body {
 .audioControls {
     position: absolute;
     bottom: 2rem;
-    max-width: 90%;
-    left: 1.5rem;
-    right: 0rem;
+    max-width: 80%;
+    margin-left: 1rem;
 }
 
 /* services */
@@ -524,7 +530,6 @@ a div {
     .carousel {
         margin-top: 1rem;
         margin-bottom: 1rem;
-        /* background-color: #D2B48C; */
     }
 
     .carousel-item {
