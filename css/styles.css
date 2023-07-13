@@ -767,6 +767,11 @@ a div {
         width: 250px;
     }
 
+    .modalWindow {    
+        &:target {
+            width: 300px;
+        }
+    }
 }
 
 @media (max-width: 950px) {
