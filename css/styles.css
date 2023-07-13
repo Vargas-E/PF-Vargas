@@ -602,7 +602,7 @@ a div {
 
     /*mediaqueries*/
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1024px) {
         body {
             font-size: 12px;
         }
@@ -724,11 +724,21 @@ a div {
         }
         
         
+        .servicesCardsContainer {
+            flex-direction: column;
+        }
     
+        
+        .serviceCard {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+
+        }
 
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
         body {
             font-size: 12px;
         }
@@ -749,16 +759,7 @@ a div {
             width: 60%;
         }
 
-        .servicesCardsContainer {
-            flex-direction: column;
-        }
 
-        .serviceCard {
-            width: 100%;
-            border-radius: 5px;
-            margin-bottom: 1rem;
-
-        }
 
         .sectionHomeAddOnContact {
             max-height: 600px;
