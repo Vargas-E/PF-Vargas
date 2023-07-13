@@ -299,6 +299,7 @@ body {
     margin: 2rem 0 1rem 0;
     padding: 1rem;
     border-radius: 5px;
+    font-size: 20px;
 }
 
 .buttonContainer {
@@ -366,7 +367,6 @@ body {
 }
 
 .showAudioCard {
-    position: relative;
     max-width: 30%;
     display: flex;
     flex-direction: column;
@@ -384,15 +384,11 @@ body {
 }
 
 .audioControls {
-    position: absolute;
-    bottom: 2rem;
     max-width: 100%;
     margin: 0.5rem;
+    margin-top: 3rem;
 }
 
-audio::-webkit-media-controls-panel {
-    background-color: #bd1d15;
-}
 
 /* services */
 
@@ -404,6 +400,7 @@ audio::-webkit-media-controls-panel {
 }
 
 .serviceCard {
+    position: relative;
     display: flex;
     flex-direction: column;
     background-color: #D2B48C;
@@ -419,6 +416,8 @@ audio::-webkit-media-controls-panel {
 }
 
 .serviceCardText {
+    display: flex;
+    flex-direction: column;
     padding: 2rem;
     border-radius: 0 0 5px 5px;
 }
@@ -465,6 +464,23 @@ a div {
 .normalizeMarginGrid {
     margin-bottom: 0rem;
     margin-top: 0rem;
+}
+
+.servicesButtonContainer {
+    height: 20px;
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.buttonBottom{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 /* products */
@@ -600,9 +616,13 @@ a div {
     margin-top: 0rem;
 }
 
+.marginFix{
+    margin-top: 0;
+}
+
 /*mediaqueries*/
 
-@media (max-width: 1024px) {
+@media (max-width: 1080px) {
     body {
         font-size: 12px;
     }
@@ -749,6 +769,16 @@ a div {
 
 }
 
+@media (max-width: 950px) {
+    .fixWidth {
+        max-width: 400px;
+    }
+
+    .imageFixProducts {
+        width: 400px;
+    }
+}
+
 @media (max-width: 768px) {
     body {
         font-size: 12px;
@@ -867,11 +897,11 @@ a div {
         width: 90%;
     }
 
-    .fixWidth {
+    /* .fixWidth {
         max-width: 300px;
     }
 
     .imageFixProducts {
         width: 300px;
-    }
+    } */
 }
