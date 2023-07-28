@@ -2,6 +2,10 @@
 
 .sectionHomeIntro {
   @include flexCenter(row, null, null, auto, 2rem 0 1rem 0);
+  @include transitionSet;
+  &:hover {
+    @include elevateWithShadow(10em, true);
+  }
   background-color: #d2b48c;
   border-radius: 10px;
   .sectionHomePicture {
@@ -23,6 +27,10 @@
 }
 
 .showsContainer {
+  @include transitionSet;
+  &:hover {
+    @include elevateWithShadow(10em, true);
+  }
   margin-top: 1rem;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -48,31 +56,8 @@
   }
   .carouselBand {
     grid-area: carouselBand;
-    margin-top: 0rem;
+    margin-top: 0;
     margin-bottom: 0;
-    .carouselArrow {
-        background-color: #d2b48c;
-        border-radius: 5px;
-        width: 5%;
-      }
-    .bandImageContainer {
-      height: 100%;
-      width: 100%;
-      text-align: center;
-      color: white;
-      .bandImage {
-        width: 100%;
-        height: 500px;
-        object-fit: cover;
-        border-radius: 5px;
-      }
-      .bandImageContainerText {
-        position: absolute;
-        top: 80%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-    }
   }
 }
 
@@ -85,8 +70,6 @@
     }
   }
 }
-
-
 
 .midScreen {
   display: none;
@@ -152,14 +135,5 @@
 
   .mobile {
     display: flex;
-  }
-
-  .carouselBand {
-    .bandImageContainer {
-      .bandImage {
-        width: 100%;
-        height: 500px;
-      }
-    }
   }
 }

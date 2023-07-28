@@ -121,8 +121,12 @@ footer .socialLinkIcon {
 }
 
 .coffeeCard {
+  transition: all 0.5s ease-in-out;
   max-width: 200px;
   margin: 1.5rem;
+}
+.coffeeCard:hover {
+  transform: scale(1.05, 1.05);
 }
 .coffeeCard .coffeeImage {
   width: 200px;
@@ -182,6 +186,38 @@ a div {
   width: 5%;
 }
 
+/**/
+.carouselArrow {
+  background-color: #d2b48c;
+  border-radius: 5px;
+  width: 60px;
+}
+
+.imageContainer {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+.imageContainer .carouselImage {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.imageContainer .carouselImageText, .imageContainer .carouselImageText--corner {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.imageContainer .carouselImageText--corner {
+  top: 5%;
+  left: 15%;
+  font-size: 24px;
+}
+
+/**/
 @media (max-width: 1080px) {
   body {
     font-size: 12px;
@@ -191,6 +227,14 @@ a div {
   }
   .genericContainer, .genericContainer--button, .genericContainer--fixMargin {
     font-size: 18px;
+  }
+  .imageContainer .carouselImage {
+    width: 100%;
+    height: 500px;
+  }
+  .imageContainer .carouselImageText--corner {
+    left: 15%;
+    font-size: 24px;
   }
 }
 @media (max-width: 768px) {
@@ -208,14 +252,41 @@ a div {
   .float .tooltipText {
     visibility: hidden;
   }
+  .imageContainer {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: white;
+  }
+  .imageContainer .carouselImage {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  .imageContainer .bandImageContainerText {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .imageContainer .carouselImageText--corner {
+    left: 50%;
+    font-size: 24px;
+  }
 }
 .sectionHomeIntro {
   display: flex;
   flex-direction: row;
   padding: auto;
   margin: 2rem 0 1rem 0;
+  transition: all 0.5s ease-in-out;
   background-color: #d2b48c;
   border-radius: 10px;
+}
+.sectionHomeIntro:hover {
+  box-shadow: 0 0.8em 0.8em -0.6em black;
+  transform: scale(1.05, 1.05);
 }
 .sectionHomeIntro .sectionHomePicture {
   width: 60%;
@@ -238,6 +309,7 @@ a div {
 }
 
 .showsContainer {
+  transition: all 0.5s ease-in-out;
   margin-top: 1rem;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -245,6 +317,10 @@ a div {
   column-gap: 2rem;
   row-gap: 1rem;
   grid-template-areas: "showDesc1 carouselBand" "showDesc2 carouselBand" "showDesc3 carouselBand";
+}
+.showsContainer:hover {
+  box-shadow: 0 0.8em 0.8em -0.6em black;
+  transform: scale(1.05, 1.05);
 }
 .showsContainer .showDesc1 {
   grid-area: showDesc1;
@@ -260,31 +336,8 @@ a div {
 }
 .showsContainer .carouselBand {
   grid-area: carouselBand;
-  margin-top: 0rem;
+  margin-top: 0;
   margin-bottom: 0;
-}
-.showsContainer .carouselBand .carouselArrow {
-  background-color: #d2b48c;
-  border-radius: 5px;
-  width: 5%;
-}
-.showsContainer .carouselBand .bandImageContainer {
-  height: 100%;
-  width: 100%;
-  text-align: center;
-  color: white;
-}
-.showsContainer .carouselBand .bandImageContainer .bandImage {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-  border-radius: 5px;
-}
-.showsContainer .carouselBand .bandImageContainer .bandImageContainerText {
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .carousel {
@@ -348,10 +401,6 @@ a div {
   }
   .mobile {
     display: flex;
-  }
-  .carouselBand .bandImageContainer .bandImage {
-    width: 100%;
-    height: 500px;
   }
 }
 .contactForm {
@@ -529,8 +578,12 @@ footer .socialLinkIcon {
 }
 
 .coffeeCard {
+  transition: all 0.5s ease-in-out;
   max-width: 200px;
   margin: 1.5rem;
+}
+.coffeeCard:hover {
+  transform: scale(1.05, 1.05);
 }
 .coffeeCard .coffeeImage {
   width: 200px;
@@ -590,6 +643,38 @@ a div {
   width: 5%;
 }
 
+/**/
+.carouselArrow {
+  background-color: #d2b48c;
+  border-radius: 5px;
+  width: 60px;
+}
+
+.imageContainer {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+.imageContainer .carouselImage {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.imageContainer .carouselImageText, .imageContainer .carouselImageText--corner {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.imageContainer .carouselImageText--corner {
+  top: 5%;
+  left: 15%;
+  font-size: 24px;
+}
+
+/**/
 @media (max-width: 1080px) {
   body {
     font-size: 12px;
@@ -599,6 +684,14 @@ a div {
   }
   .genericContainer, .genericContainer--button, .genericContainer--fixMargin {
     font-size: 18px;
+  }
+  .imageContainer .carouselImage {
+    width: 100%;
+    height: 500px;
+  }
+  .imageContainer .carouselImageText--corner {
+    left: 15%;
+    font-size: 24px;
   }
 }
 @media (max-width: 768px) {
@@ -615,6 +708,28 @@ a div {
   }
   .float .tooltipText {
     visibility: hidden;
+  }
+  .imageContainer {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: white;
+  }
+  .imageContainer .carouselImage {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  .imageContainer .bandImageContainerText {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .imageContainer .carouselImageText--corner {
+    left: 50%;
+    font-size: 24px;
   }
 }
 .productOptionsFormContainer {
@@ -832,12 +947,17 @@ a div {
   margin: 2rem 0 2rem 0;
 }
 .servicesCardsContainer .serviceCard {
+  transition: all 0.5s ease-in-out;
   position: relative;
   display: flex;
   flex-direction: column;
   background-color: #d2b48c;
   width: 30%;
   border-radius: 5px;
+}
+.servicesCardsContainer .serviceCard:hover {
+  box-shadow: 0 0.8em 0.8em -0.6em black;
+  transform: scale(1.05, 1.05);
 }
 .servicesCardsContainer .serviceCard .serviceCardImg {
   width: 100%;
@@ -871,23 +991,292 @@ a div {
     margin-bottom: 1rem;
   }
 }
+body {
+  background-image: url("../assets/images/background_final.jpg");
+  width: 100%;
+  font-family: "Lato";
+  z-index: 0;
+}
+
+.homeBody {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem 0 1rem;
+  margin: auto;
+  max-width: 1200px;
+}
+
+.primaryImageContainer {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  font-style: italic;
+}
+.primaryImageContainer .centerImageText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.primaryImageContainer .centerImage {
+  width: 100vw;
+  height: 400px;
+  object-fit: cover;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0 2rem 0;
+  margin: auto;
+  background-color: #1e1e1e;
+  color: white;
+}
+footer .socialLinkIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: auto;
+  margin: auto auto 1rem auto;
+  width: 20%;
+}
+footer .socialLinkIcon {
+  width: 30px;
+}
+
+.navBar {
+  background-color: #1e1e1e;
+  --bs-navbar-padding-y: 0;
+  --bs-navbar-hover-color: #bd1d15;
+  --bs-navbar-color: white;
+}
+.navBar .navbar-expand-md {
+  justify-content: flex-end;
+}
+.navBar .logo {
+  background-color: #d2b48c;
+  height: 70px;
+}
+.navBar .navbar-collapse {
+  justify-content: flex-end;
+}
+.navBar .nav-link.disabled {
+  color: #bd1d15;
+}
+
+.genericContainer, .genericContainer--button, .genericContainer--fixMargin {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 2rem 0 1rem 0;
+  background-color: #d2b48c;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.genericContainer--button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem 0 0 0;
+}
+
+.genericContainer--fixMargin {
+  margin: 0;
+}
+
+.coffeeButton, .coffeeButton--bottom {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.5rem;
+  background-color: #1e1e1e;
+  color: #f2f2f2;
+  vertical-align: middle;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.coffeeButton--bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 0rem;
+  width: 100%;
+}
+
+.coffeeCard {
+  transition: all 0.5s ease-in-out;
+  max-width: 200px;
+  margin: 1.5rem;
+}
+.coffeeCard:hover {
+  transform: scale(1.05, 1.05);
+}
+.coffeeCard .coffeeImage {
+  width: 200px;
+  object-fit: cover;
+  display: inline-block;
+  border-radius: 5px 5px 0 0;
+}
+.coffeeCard .coffeeDesc {
+  padding: 1rem;
+  background-color: #d2b48c;
+  border-radius: 0 0 5px 5px;
+}
+
+.float {
+  z-index: 10;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #1e1e1e;
+  color: #fff;
+  border-radius: 50px;
+  border: 1px solid #d2b48c;
+  text-align: center;
+  text-decoration: none;
+  font-size: 40px;
+}
+.float:hover {
+  visibility: visible;
+}
+.float:hover .tooltipText {
+  visibility: visible;
+}
+.float .tooltipText {
+  font-weight: bold;
+  font-size: 10px;
+  visibility: hidden;
+  position: fixed;
+  bottom: 105px;
+  right: 20px;
+  width: 100px;
+  background-color: #1e1e1e;
+  color: #d2b48c;
+  text-align: center;
+  padding: 5px 0;
+  z-index: 1;
+}
+
+a div {
+  padding-top: 0.5rem;
+}
+
+.carouselArrow {
+  background-color: #d2b48c;
+  border-radius: 5px;
+  width: 5%;
+}
+
+/**/
+.carouselArrow {
+  background-color: #d2b48c;
+  border-radius: 5px;
+  width: 60px;
+}
+
+.imageContainer {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+.imageContainer .carouselImage {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.imageContainer .carouselImageText, .imageContainer .carouselImageText--corner {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.imageContainer .carouselImageText--corner {
+  top: 5%;
+  left: 15%;
+  font-size: 24px;
+}
+
+/**/
+@media (max-width: 1080px) {
+  body {
+    font-size: 12px;
+  }
+  footer .socialLinkIcons {
+    width: 40%;
+  }
+  .genericContainer, .genericContainer--button, .genericContainer--fixMargin {
+    font-size: 18px;
+  }
+  .imageContainer .carouselImage {
+    width: 100%;
+    height: 500px;
+  }
+  .imageContainer .carouselImageText--corner {
+    left: 15%;
+    font-size: 24px;
+  }
+}
+@media (max-width: 768px) {
+  footer .socialLinkIcons {
+    width: 60%;
+  }
+  .genericContainer, .genericContainer--button, .genericContainer--fixMargin {
+    font-size: 14px;
+  }
+  .float {
+    bottom: 25px;
+    right: 20px;
+    font-size: 40px;
+  }
+  .float .tooltipText {
+    visibility: hidden;
+  }
+  .imageContainer {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: white;
+  }
+  .imageContainer .carouselImage {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  .imageContainer .bandImageContainerText {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .imageContainer .carouselImageText--corner {
+    left: 50%;
+    font-size: 24px;
+  }
+}
 .showsPageCarousel {
+  transition: all 0.5s ease-in-out;
   margin: 2rem 0 2rem 0;
+}
+.showsPageCarousel:hover {
+  transform: scale(1.05, 1.05);
 }
 .showsPageCarousel .bandsCarousel {
   margin-top: 0rem;
   width: 100%;
-}
-.showsPageCarousel .bandsCarousel .showImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.showsPageCarousel .bandsCarousel .centerImageTextShows {
-  position: absolute;
-  top: 5%;
-  left: 15%;
-  transform: translate(-50%, -50%);
 }
 
 .showAudioContainer {
@@ -897,6 +1286,7 @@ a div {
   margin-bottom: 2rem;
 }
 .showAudioContainer .showAudioCard {
+  transition: all 0.5s ease-in-out;
   max-width: 30%;
   display: flex;
   flex-direction: column;
@@ -905,6 +1295,9 @@ a div {
   border-radius: 5px;
   text-align: center;
   min-height: 400px;
+}
+.showAudioContainer .showAudioCard:hover {
+  transform: scale(1.05, 1.05);
 }
 .showAudioContainer .showAudioCard .audioContainer {
   display: flex;
@@ -966,24 +1359,6 @@ a div {
     max-width: 100%;
     padding: 1rem;
     min-height: 400px;
-  }
-  .showsPageCarousel {
-    width: 100vw;
-    position: relative;
-    left: calc(-50vw + 50%);
-    height: 500px;
-  }
-  .showsPageCarousel #carouselBand2 {
-    margin-top: 0rem;
-    width: 100%;
-  }
-  .showsPageCarousel #carouselBand2 .showImage {
-    width: initial;
-    height: 500px;
-  }
-  .showsPageCarousel #carouselBand2 .centerImageTextShows {
-    font-size: 20px;
-    left: 25%;
   }
 }
 * {

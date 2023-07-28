@@ -1,9 +1,15 @@
+@import "../mixins/mixins";
+
 .servicesCardsContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin: 2rem 0 2rem 0;
   .serviceCard {
+    @include transitionSet;
+    &:hover {
+      @include elevateWithShadow(10em, true);
+    }
     position: relative;
     display: flex;
     flex-direction: column;
