@@ -1,3 +1,4 @@
+/* general use flex with general usage properties */
 @mixin flexCenter($direction, $justify, $align, $padding, $margin) {
   display: flex;
   flex-direction: $direction;
@@ -7,16 +8,16 @@
   margin: $margin;
 }
 
+/* set for transition. Put in css component with elevateWithShadow to use*/
 @mixin transitionSet {
   transition: all 0.5s ease-in-out;
 }
 
+
+/* transformation. Put in css component with transitionSet with &:trigger to use*/
 @mixin elevateWithShadow($elevation, $useShadow: false) {
   @if $useShadow == true {
     box-shadow: 0 0.8em 0.8em -0.6em black;
   }
   transform: scale(1.05, 1.05);
-  // transition-duration: 500ms;
-  // transition-property: translateY($elevation);
-  // transition-timing-function: ease-in-out;
 }

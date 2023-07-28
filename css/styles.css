@@ -1,4 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"); /* general use flex with general usage properties */
+/* set for transition. Put in css component with elevateWithShadow to use*/
+/* transformation. Put in css component with transitionSet with &:trigger to use*/
+/* general use flex with general usage properties */
+/* set for transition. Put in css component with elevateWithShadow to use*/
+/* transformation. Put in css component with transitionSet with &:trigger to use*/
 body {
   background-image: url("../assets/images/background_final.webp");
   width: 100%;
@@ -275,6 +280,9 @@ a div {
     font-size: 24px;
   }
 }
+/* general use flex with general usage properties */
+/* set for transition. Put in css component with elevateWithShadow to use*/
+/* transformation. Put in css component with transitionSet with &:trigger to use*/
 .sectionHomeIntro {
   display: flex;
   flex-direction: row;
@@ -403,6 +411,9 @@ a div {
     display: flex;
   }
 }
+/* general use flex with general usage properties */
+/* set for transition. Put in css component with elevateWithShadow to use*/
+/* transformation. Put in css component with transitionSet with &:trigger to use*/
 .contactForm {
   display: flex;
   flex-direction: column;
@@ -456,6 +467,12 @@ a div {
     width: 100%;
   }
 }
+/* general use flex with general usage properties */
+/* set for transition. Put in css component with elevateWithShadow to use*/
+/* transformation. Put in css component with transitionSet with &:trigger to use*/
+/* general use flex with general usage properties */
+/* set for transition. Put in css component with elevateWithShadow to use*/
+/* transformation. Put in css component with transitionSet with &:trigger to use*/
 body {
   background-image: url("../assets/images/background_final.webp");
   width: 100%;
@@ -940,6 +957,9 @@ a div {
     width: 100%;
   }
 }
+/* general use flex with general usage properties */
+/* set for transition. Put in css component with elevateWithShadow to use*/
+/* transformation. Put in css component with transitionSet with &:trigger to use*/
 .servicesCardsContainer {
   display: flex;
   flex-direction: row;
@@ -991,6 +1011,9 @@ a div {
     margin-bottom: 1rem;
   }
 }
+/* general use flex with general usage properties */
+/* set for transition. Put in css component with elevateWithShadow to use*/
+/* transformation. Put in css component with transitionSet with &:trigger to use*/
 body {
   background-image: url("../assets/images/background_final.webp");
   width: 100%;
@@ -1267,6 +1290,9 @@ a div {
     font-size: 24px;
   }
 }
+/* general use flex with general usage properties */
+/* set for transition. Put in css component with elevateWithShadow to use*/
+/* transformation. Put in css component with transitionSet with &:trigger to use*/
 .showsPageCarousel {
   transition: all 0.5s ease-in-out;
   margin: 2rem 0 2rem 0;
