@@ -1,8 +1,9 @@
 @import "../mixins/mixins";
+@import "../variables";
 
 .contactForm {
   @include flexCenter(column, center, center, 1rem, 0);
-  background-color: #d2b48c;
+  background-color: $containerColor;
   border-radius: 5px;
   .contactInputs {
     @include flexCenter(row, null, null, 0, 0);

@@ -68,11 +68,15 @@ footer .socialLinkIcon {
   --bs-navbar-color: white;
 }
 .navBar .navbar-expand-md {
+  padding-right: 1rem;
   justify-content: flex-end;
 }
 .navBar .logo {
   background-color: #d2b48c;
   height: 70px;
+}
+.navBar .sand {
+  margin-right: 1rem;
 }
 .navBar .navbar-collapse {
   justify-content: flex-end;
@@ -537,11 +541,15 @@ footer .socialLinkIcon {
   --bs-navbar-color: white;
 }
 .navBar .navbar-expand-md {
+  padding-right: 1rem;
   justify-content: flex-end;
 }
 .navBar .logo {
   background-color: #d2b48c;
   height: 70px;
+}
+.navBar .sand {
+  margin-right: 1rem;
 }
 .navBar .navbar-collapse {
   justify-content: flex-end;
@@ -1078,11 +1086,15 @@ footer .socialLinkIcon {
   --bs-navbar-color: white;
 }
 .navBar .navbar-expand-md {
+  padding-right: 1rem;
   justify-content: flex-end;
 }
 .navBar .logo {
   background-color: #d2b48c;
   height: 70px;
+}
+.navBar .sand {
+  margin-right: 1rem;
 }
 .navBar .navbar-collapse {
   justify-content: flex-end;

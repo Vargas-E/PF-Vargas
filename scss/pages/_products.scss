@@ -1,5 +1,5 @@
 @import "../mixins/mixins";
-
+@import "../variables";
 @import "../reusableComponents/components";
 
 .productOptionsFormContainer {
@@ -11,7 +11,7 @@
     min-width: 20vw;
     padding: 1rem;
     margin-right: 1rem;
-    background-color: #d2b48c;
+    background-color: $containerColor;
     height: 50vh;
     position: sticky;
     top: 2vh;
@@ -26,7 +26,7 @@
       .slider {
         appearance: none;
         width: 100%;
-        background: #bd1d15;
+        background: $secondaryTone;
         -webkit-transition: 0.2s;
         transition: opacity 0.2s;
         border-radius: 5px;
@@ -86,7 +86,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 2em;
-    background-color: #d2b48c;
+    background-color: $containerColor;
     border: 2px solid black;
     border-radius: 5px;
   }
@@ -109,7 +109,7 @@
         .slider {
           appearance: none;
           width: 100%;
-          background: #bd1d15;
+          background: $secondaryTone;
           -webkit-transition: 0.2s;
           transition: opacity 0.2s;
           border-radius: 5px;
@@ -179,7 +179,7 @@
         .slider {
           appearance: none;
           width: 100%;
-          background: #bd1d15;
+          background: $secondaryTone;
           -webkit-transition: 0.2s;
           transition: opacity 0.2s;
           border-radius: 5px;

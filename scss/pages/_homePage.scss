@@ -1,4 +1,5 @@
 @import "../mixins/mixins";
+@import "../variables";
 
 .sectionHomeIntro {
   @include flexCenter(row, null, null, auto, 2rem 0 1rem 0);
@@ -6,7 +7,7 @@
   &:hover {
     @include elevateWithShadow(10em, true);
   }
-  background-color: #d2b48c;
+  background-color: $containerColor;
   border-radius: 10px;
   .sectionHomePicture {
     width: 60%;
@@ -45,7 +46,7 @@
   .showDesc1 {
     grid-area: showDesc1;
     .soldOut {
-      color: #bd1d15;
+      color: $secondaryTone;
     }
   }
   .showDesc2 {
@@ -80,7 +81,7 @@
 }
 
 .soldOut {
-  color: #bd1d15;
+  color: $secondaryTone;
 }
 
 @media (max-width: 1080px) {

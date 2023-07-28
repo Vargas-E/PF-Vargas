@@ -1,4 +1,5 @@
 @import "../mixins/mixins";
+@import "../variables";
 
 body {
   background-image: url("../assets/images/background_final.webp");
@@ -15,7 +16,7 @@ body {
 .primaryImageContainer {
   position: relative;
   text-align: center;
-  color: white;
+  color: $imageTextColor;
   font-size: 25px;
   font-style: italic;
   .centerImageText {
@@ -33,8 +34,8 @@ body {
 
 footer {
   @include flexCenter(column, center, center, 4rem 0 2rem 0, auto);
-  background-color: #1e1e1e;
-  color: white;
+  background-color: $buttonColor;
+  color: $imageTextColor;
   .socialLinkIcons {
     @include flexCenter(row, space-around, center, auto, auto auto 1rem auto);
     width: 20%;
@@ -44,29 +45,35 @@ footer {
   }
 }
 
+
+
 .navBar {
-  background-color: #1e1e1e;
+  background-color: $buttonColor;
   --bs-navbar-padding-y: 0;
   --bs-navbar-hover-color: #bd1d15;
   --bs-navbar-color: white;
   .navbar-expand-md {
+    padding-right: 1rem;
     justify-content: flex-end;
   }
   .logo {
-    background-color: #d2b48c;
+    background-color: $containerColor;
     height: 70px;
+  }
+  .sand {
+    margin-right: 1rem;
   }
   .navbar-collapse {
     justify-content: flex-end;
   }
   .nav-link.disabled {
-    color: #bd1d15;
+    color: $secondaryTone;
   }
 }
 
 .genericContainer {
   @include flexCenter(column, null, null, 1rem, 2rem 0 1rem 0);
-  background-color: #d2b48c;
+  background-color: $containerColor;
   border-radius: 5px;
   font-size: 20px;
 }
@@ -85,7 +92,7 @@ footer {
   border: 1px solid black;
   border-radius: 5px;
   padding: 0.5rem;
-  background-color: #1e1e1e;
+  background-color: $buttonColor;
   color: #f2f2f2;
   vertical-align: middle;
   cursor: pointer;
@@ -113,7 +120,7 @@ footer {
   }
   .coffeeDesc {
     padding: 1rem;
-    background-color: #d2b48c;
+    background-color: $containerColor;
     border-radius: 0 0 5px 5px;
   }
 }
@@ -125,10 +132,10 @@ footer {
   height: 60px;
   bottom: 40px;
   right: 40px;
-  background-color: #1e1e1e;
+  background-color: $buttonColor;
   color: #fff;
   border-radius: 50px;
-  border: 1px solid #d2b48c;
+  border: 1px solid $containerColor;
   text-align: center;
   text-decoration: none;
   font-size: 40px;
@@ -146,8 +153,8 @@ footer {
     bottom: 105px;
     right: 20px;
     width: 100px;
-    background-color: #1e1e1e;
-    color: #d2b48c;
+    background-color: $buttonColor;
+    color: $containerColor;
     text-align: center;
     padding: 5px 0;
     z-index: 1;
@@ -159,7 +166,7 @@ a div {
 }
 
 .carouselArrow {
-  background-color: #d2b48c;
+  background-color: $containerColor;
   border-radius: 5px;
   width: 5%;
 }
@@ -167,7 +174,7 @@ a div {
 /**/
 
 .carouselArrow {
-  background-color: #d2b48c;
+  background-color: $containerColor;
   border-radius: 5px;
   width: 60px;
 }
@@ -176,7 +183,7 @@ a div {
   height: 100%;
   width: 100%;
   text-align: center;
-  color: white;
+  color: $imageTextColor;
   .carouselImage {
     width: 100%;
     height: 500px;
@@ -252,7 +259,7 @@ a div {
     height: 100%;
     width: 100%;
     text-align: center;
-    color: white;
+    color: $imageTextColor;
     .carouselImage {
       width: 100%;
       height: 500px;
