@@ -1,9 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap");
-* {
-  margin: 0;
-  scroll-behavior: smooth;
-}
-
 body {
   background-image: url("../assets/images/background_final.jpg");
   width: 100%;
@@ -11,94 +6,14 @@ body {
   z-index: 0;
 }
 
-.navbar {
-  background-color: #1e1e1e;
-  --bs-navbar-padding-y: 0;
-  --bs-navbar-hover-color: #bd1d15;
-  --bs-navbar-color: white;
-}
-.navbar .navbar-expand-md {
-  justify-content: flex-end;
-}
-.navbar .logo {
-  background-color: #d2b48c;
-  height: 70px;
-}
-.navbar .navbar-collapse {
-  justify-content: flex-end;
-}
-.navbar .nav-link.disabled {
-  color: #bd1d15;
-}
-
-footer {
-  padding: 4rem 0 2rem 0;
-  background-color: #1e1e1e;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
-}
-footer .socialLinkIcons {
-  width: 20%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-bottom: 1rem;
-}
-footer .socialLinkIcon {
-  width: 30px;
-}
-
-/* reutilizables */
 .homeBody {
-  max-width: 1200px;
   display: flex;
   flex-direction: column;
+  padding: 0 1rem 0 1rem;
   margin: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  max-width: 1200px;
 }
 
-.carousel-control-prev {
-  background-color: #d2b48c;
-  border-radius: 5px;
-  width: 5%;
-}
-
-.carousel-control-next {
-  background-color: #d2b48c;
-  border-radius: 5px;
-  width: 5%;
-}
-
-.fixFlex {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.genericContainer {
-  display: flex;
-  background-color: #d2b48c;
-  margin: 2rem 0 1rem 0;
-  padding: 1rem;
-  border-radius: 5px;
-  font-size: 20px;
-}
-
-.coffeeButton {
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 0.5rem;
-  background-color: #1e1e1e;
-  color: #f2f2f2;
-  vertical-align: middle;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-/* homeMain*/
 .primaryImageContainer {
   position: relative;
   text-align: center;
@@ -118,12 +33,188 @@ footer .socialLinkIcon {
   object-fit: cover;
 }
 
-.sectionHomeIntro {
-  margin-top: 2rem;
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0 2rem 0;
+  margin: auto;
+  background-color: #1e1e1e;
+  color: white;
+}
+footer .socialLinkIcons {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: auto;
+  margin: auto auto 1rem auto;
+  width: 20%;
+}
+footer .socialLinkIcon {
+  width: 30px;
+}
+
+.navBar {
+  background-color: #1e1e1e;
+  --bs-navbar-padding-y: 0;
+  --bs-navbar-hover-color: #bd1d15;
+  --bs-navbar-color: white;
+}
+.navBar .navbar-expand-md {
+  justify-content: flex-end;
+}
+.navBar .logo {
   background-color: #d2b48c;
-  margin-bottom: 1rem;
+  height: 70px;
+}
+.navBar .navbar-collapse {
+  justify-content: flex-end;
+}
+.navBar .nav-link.disabled {
+  color: #bd1d15;
+}
+
+.genericContainer, .genericContainer--fixMargin, .genericContainer--button {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 2rem 0 1rem 0;
+  background-color: #d2b48c;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.genericContainer--button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem 0 0 0;
+}
+
+.genericContainer--fixMargin {
+  margin: 0;
+}
+
+.coffeeButton, .coffeeButton--bottom {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.5rem;
+  background-color: #1e1e1e;
+  color: #f2f2f2;
+  vertical-align: middle;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.coffeeButton--bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 0rem;
+  width: 100%;
+}
+
+.coffeeCard {
+  max-width: 200px;
+  margin: 1.5rem;
+}
+.coffeeCard .coffeeImage {
+  width: 200px;
+  object-fit: cover;
+  display: inline-block;
+  border-radius: 5px 5px 0 0;
+}
+.coffeeCard .coffeeDesc {
+  padding: 1rem;
+  background-color: #d2b48c;
+  border-radius: 0 0 5px 5px;
+}
+
+.float {
+  z-index: 10;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #1e1e1e;
+  color: #fff;
+  border-radius: 50px;
+  border: 1px solid #d2b48c;
+  text-align: center;
+  text-decoration: none;
+  font-size: 40px;
+}
+.float:hover {
+  visibility: visible;
+}
+.float:hover .tooltipText {
+  visibility: visible;
+}
+.float .tooltipText {
+  font-weight: bold;
+  font-size: 10px;
+  visibility: hidden;
+  position: fixed;
+  bottom: 105px;
+  right: 20px;
+  width: 100px;
+  background-color: #1e1e1e;
+  color: #d2b48c;
+  text-align: center;
+  padding: 5px 0;
+  z-index: 1;
+}
+
+a div {
+  padding-top: 0.5rem;
+}
+
+.carouselArrow {
+  background-color: #d2b48c;
+  border-radius: 5px;
+  width: 5%;
+}
+
+@media (max-width: 1080px) {
+  body {
+    font-size: 12px;
+  }
+  footer .socialLinkIcons {
+    width: 40%;
+  }
+  .genericContainer, .genericContainer--button, .genericContainer--fixMargin {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  footer .socialLinkIcons {
+    width: 60%;
+  }
+  .genericContainer, .genericContainer--button, .genericContainer--fixMargin {
+    font-size: 14px;
+  }
+  .float {
+    bottom: 25px;
+    right: 20px;
+    font-size: 40px;
+  }
+  .float .tooltipText {
+    visibility: hidden;
+  }
+}
+.sectionHomeIntro {
+  display: flex;
+  flex-direction: row;
+  padding: auto;
+  margin: 2rem 0 1rem 0;
+  background-color: #d2b48c;
   border-radius: 10px;
 }
 .sectionHomeIntro .sectionHomePicture {
@@ -134,26 +225,16 @@ footer .socialLinkIcon {
 .sectionHomeIntro .sectionHomeText {
   display: flex;
   flex-direction: column;
-  width: 40%;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   padding: 0 1rem 0 1rem;
+  margin: 0;
+  width: 40%;
 }
 
-.buttonContainer {
-  display: flex;
-  background-color: #d2b48c;
-  margin-top: 1rem;
-  padding: 1rem;
-  border-radius: 5px;
-  justify-content: space-between;
-  align-items: center;
-}
-.buttonContainer .buttonContainerText {
-  font-size: 24px;
-}
-.buttonContainer .seeMoreCoffee a {
+.seeMoreCoffee a {
   text-decoration: none;
+  font-size: 16px;
 }
 
 .showsContainer {
@@ -164,10 +245,6 @@ footer .socialLinkIcon {
   column-gap: 2rem;
   row-gap: 1rem;
   grid-template-areas: "showDesc1 carouselBand" "showDesc2 carouselBand" "showDesc3 carouselBand";
-}
-.showsContainer .normalizeMarginGrid {
-  margin-bottom: 0rem;
-  margin-top: 0rem;
 }
 .showsContainer .showDesc1 {
   grid-area: showDesc1;
@@ -185,6 +262,11 @@ footer .socialLinkIcon {
   grid-area: carouselBand;
   margin-top: 0rem;
   margin-bottom: 0;
+}
+.showsContainer .carouselBand .carouselArrow {
+  background-color: #d2b48c;
+  border-radius: 5px;
+  width: 5%;
 }
 .showsContainer .carouselBand .bandImageContainer {
   height: 100%;
@@ -212,24 +294,7 @@ footer .socialLinkIcon {
   display: flex;
   justify-content: center;
 }
-.carousel .carousel-inner .coffeeListCarousel .coffeeCard {
-  max-width: 200px;
-  margin: 1.5rem;
-}
-.carousel .carousel-inner .coffeeListCarousel .coffeeCard .coffeeImage {
-  width: 200px;
-  object-fit: cover;
-  display: inline-block;
-  border-radius: 5px 5px 0 0;
-}
-.carousel .carousel-inner .coffeeListCarousel .coffeeCard .coffeeDesc {
-  padding: 1rem;
-  background-color: #d2b48c;
-  border-radius: 0 0 5px 5px;
-}
 
-/* Contact */
-/* Clases para cambiar de carousel en homePage*/
 .midScreen {
   display: none;
 }
@@ -243,12 +308,6 @@ footer .socialLinkIcon {
 }
 
 @media (max-width: 1080px) {
-  footer .socialLinkIcons {
-    width: 40%;
-  }
-  body {
-    font-size: 12px;
-  }
   .sectionHomeIntro {
     flex-direction: column-reverse;
   }
@@ -263,9 +322,6 @@ footer .socialLinkIcon {
     width: 100%;
     padding: 1rem;
   }
-  .buttonContainer .buttonContainerText {
-    font-size: 18px;
-  }
   .showsContainer {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: 2fr repeat(3, 0.5fr);
@@ -273,10 +329,6 @@ footer .socialLinkIcon {
     row-gap: 1rem;
     grid-template-areas: "carouselBand" "showDesc1" "showDesc2" "showDesc3";
   }
-  .carouselBand .bandImageContainer .bandImage {
-    width: 100%;
-    height: 500px;
-  }
   .midScreen {
     display: flex;
   }
@@ -286,7 +338,266 @@ footer .socialLinkIcon {
   .mobile {
     display: none;
   }
-  .genericContainer {
+}
+@media (max-width: 768px) {
+  .midScreen {
+    display: none;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: flex;
+  }
+  .carouselBand .bandImageContainer .bandImage {
+    width: 100%;
+    height: 500px;
+  }
+}
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 0;
+  background-color: #d2b48c;
+  border-radius: 5px;
+}
+.contactForm .contactInputs {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.contactForm .submitMailContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.sectionHomeAddOnContact {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  max-height: 400px;
+}
+
+@media (max-width: 1080px) {
+  .sectionHomeAddOnContact {
+    max-height: 600px;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .contactForm {
+    flex-direction: column;
+  }
+  .contactForm .contactInputs {
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .contactForm .contactInputs .contactFormInputs {
+    width: 100%;
+  }
+}
+body {
+  background-image: url("../assets/images/background_final.jpg");
+  width: 100%;
+  font-family: "Lato";
+  z-index: 0;
+}
+
+.homeBody {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem 0 1rem;
+  margin: auto;
+  max-width: 1200px;
+}
+
+.primaryImageContainer {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  font-style: italic;
+}
+.primaryImageContainer .centerImageText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.primaryImageContainer .centerImage {
+  width: 100vw;
+  height: 400px;
+  object-fit: cover;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0 2rem 0;
+  margin: auto;
+  background-color: #1e1e1e;
+  color: white;
+}
+footer .socialLinkIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: auto;
+  margin: auto auto 1rem auto;
+  width: 20%;
+}
+footer .socialLinkIcon {
+  width: 30px;
+}
+
+.navBar {
+  background-color: #1e1e1e;
+  --bs-navbar-padding-y: 0;
+  --bs-navbar-hover-color: #bd1d15;
+  --bs-navbar-color: white;
+}
+.navBar .navbar-expand-md {
+  justify-content: flex-end;
+}
+.navBar .logo {
+  background-color: #d2b48c;
+  height: 70px;
+}
+.navBar .navbar-collapse {
+  justify-content: flex-end;
+}
+.navBar .nav-link.disabled {
+  color: #bd1d15;
+}
+
+.genericContainer, .genericContainer--button, .genericContainer--fixMargin {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 2rem 0 1rem 0;
+  background-color: #d2b48c;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.genericContainer--button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem 0 0 0;
+}
+
+.genericContainer--fixMargin {
+  margin: 0;
+}
+
+.coffeeButton, .coffeeButton--bottom {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.5rem;
+  background-color: #1e1e1e;
+  color: #f2f2f2;
+  vertical-align: middle;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.coffeeButton--bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 0rem;
+  width: 100%;
+}
+
+.coffeeCard {
+  max-width: 200px;
+  margin: 1.5rem;
+}
+.coffeeCard .coffeeImage {
+  width: 200px;
+  object-fit: cover;
+  display: inline-block;
+  border-radius: 5px 5px 0 0;
+}
+.coffeeCard .coffeeDesc {
+  padding: 1rem;
+  background-color: #d2b48c;
+  border-radius: 0 0 5px 5px;
+}
+
+.float {
+  z-index: 10;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #1e1e1e;
+  color: #fff;
+  border-radius: 50px;
+  border: 1px solid #d2b48c;
+  text-align: center;
+  text-decoration: none;
+  font-size: 40px;
+}
+.float:hover {
+  visibility: visible;
+}
+.float:hover .tooltipText {
+  visibility: visible;
+}
+.float .tooltipText {
+  font-weight: bold;
+  font-size: 10px;
+  visibility: hidden;
+  position: fixed;
+  bottom: 105px;
+  right: 20px;
+  width: 100px;
+  background-color: #1e1e1e;
+  color: #d2b48c;
+  text-align: center;
+  padding: 5px 0;
+  z-index: 1;
+}
+
+a div {
+  padding-top: 0.5rem;
+}
+
+.carouselArrow {
+  background-color: #d2b48c;
+  border-radius: 5px;
+  width: 5%;
+}
+
+@media (max-width: 1080px) {
+  body {
+    font-size: 12px;
+  }
+  footer .socialLinkIcons {
+    width: 40%;
+  }
+  .genericContainer, .genericContainer--button, .genericContainer--fixMargin {
     font-size: 18px;
   }
 }
@@ -294,21 +605,390 @@ footer .socialLinkIcon {
   footer .socialLinkIcons {
     width: 60%;
   }
-  .buttonContainer .buttonContainerText {
+  .genericContainer, .genericContainer--button, .genericContainer--fixMargin {
     font-size: 14px;
   }
-  .midScreen {
-    display: none;
+  .float {
+    bottom: 25px;
+    right: 20px;
+    font-size: 40px;
   }
-  .desktop {
-    display: none;
+  .float .tooltipText {
+    visibility: hidden;
   }
-  .mobile {
+}
+.productOptionsFormContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.productOptionsFormContainer .productsForm {
+  min-width: 20vw;
+  padding: 1rem;
+  margin-right: 1rem;
+  background-color: #d2b48c;
+  height: 50vh;
+  position: sticky;
+  top: 2vh;
+  border-radius: 5px;
+}
+.productOptionsFormContainer .productsForm .formItems {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.productOptionsFormContainer .productsForm .sliderContainer {
+  width: 100%;
+}
+.productOptionsFormContainer .productsForm .sliderContainer .slider {
+  appearance: none;
+  width: 100%;
+  background: #bd1d15;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  border-radius: 5px;
+}
+.productOptionsFormContainer .productsForm .finishProducts {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  width: 90%;
+}
+.productOptionsFormContainer .productsForm .buttonLink {
+  display: flex;
+  justify-content: center;
+}
+.productOptionsFormContainer .coffeeList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.productOptionsFormContainer .coffeeList .productType {
+  display: flex;
+  justify-content: center;
+}
+.productOptionsFormContainer .coffeeList .productType .coffeeButtonProductsPage {
+  margin-top: 5px;
+  width: 100%;
+}
+
+.modalWindow {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  visibility: hidden;
+}
+.modalWindow .modalButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: auto;
+  margin: auto;
+  position: absolute;
+  bottom: 2rem;
+  width: 80%;
+}
+.modalWindow:target {
+  margin-top: 5rem;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  width: 400px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2em;
+  background-color: #d2b48c;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+@media (max-width: 1080px) {
+  .productOptionsFormContainer {
+    flex-direction: column;
+  }
+  .productOptionsFormContainer .productsForm {
+    margin: 1rem 0 1rem 0;
+    top: initial;
+    max-height: 40vh;
+  }
+  .productOptionsFormContainer .productsForm .formItems {
     display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
   }
-  .genericContainer {
-    font-size: 14px;
+  .productOptionsFormContainer .productsForm .sliderContainer {
+    width: 100%;
   }
+  .productOptionsFormContainer .productsForm .sliderContainer .slider {
+    appearance: none;
+    width: 100%;
+    background: #bd1d15;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+    border-radius: 5px;
+  }
+  .productOptionsFormContainer .productsForm .finishProducts {
+    position: absolute;
+    bottom: 1rem;
+    width: 90%;
+  }
+  .productOptionsFormContainer .productsForm .buttonLink {
+    display: flex;
+    justify-content: center;
+  }
+  .productOptionsFormContainer .coffeeList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .productOptionsFormContainer .coffeeList .fixWidth {
+    max-width: 250px;
+  }
+  .productOptionsFormContainer .coffeeList .fixWidth .imageFixProducts {
+    width: 250px;
+  }
+  .productOptionsFormContainer .coffeeList .productType {
+    display: flex;
+    justify-content: center;
+  }
+  .productOptionsFormContainer .coffeeList .productType .coffeeButtonProductsPage {
+    margin-top: 5px;
+    width: 100%;
+  }
+}
+@media (max-width: 950px) {
+  .productOptionsFormContainer .coffeeList .fixWidth {
+    max-width: 400px;
+  }
+  .productOptionsFormContainer .coffeeList .fixWidth .imageFixProducts {
+    width: 400px;
+  }
+}
+@media (max-width: 768px) {
+  .productOptionsFormContainer {
+    flex-direction: column;
+  }
+  .productOptionsFormContainer .productsForm {
+    margin: 1rem 0 1rem 0;
+    top: initial;
+    max-height: 40vh;
+  }
+  .productOptionsFormContainer .productsForm .formItems {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .productOptionsFormContainer .productsForm .sliderContainer {
+    width: 100%;
+  }
+  .productOptionsFormContainer .productsForm .sliderContainer .slider {
+    appearance: none;
+    width: 100%;
+    background: #bd1d15;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+    border-radius: 5px;
+  }
+  .productOptionsFormContainer .productsForm .finishProducts {
+    position: absolute;
+    bottom: 1rem;
+    width: 90%;
+  }
+  .productOptionsFormContainer .productsForm .buttonLink {
+    display: flex;
+    justify-content: center;
+  }
+  .productOptionsFormContainer .coffeeList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .productOptionsFormContainer .coffeeList .productType {
+    display: flex;
+    justify-content: center;
+  }
+  .productOptionsFormContainer .coffeeList .productType .coffeeButtonProductsPage {
+    margin-top: 5px;
+    width: 100%;
+  }
+}
+.servicesCardsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 2rem 0 2rem 0;
+}
+.servicesCardsContainer .serviceCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #d2b48c;
+  width: 30%;
+  border-radius: 5px;
+}
+.servicesCardsContainer .serviceCard .serviceCardImg {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+}
+.servicesCardsContainer .serviceCard .serviceCardText {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 0 0 5px 5px;
+}
+.servicesCardsContainer .serviceCard .servicesButtonContainer {
+  height: 20px;
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 1080px) {
+  .servicesCardsContainer {
+    flex-direction: column;
+  }
+  .servicesCardsContainer .serviceCard {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+}
+.showsPageCarousel {
+  margin: 2rem 0 2rem 0;
+}
+.showsPageCarousel .bandsCarousel {
+  margin-top: 0rem;
+  width: 100%;
+}
+.showsPageCarousel .bandsCarousel .showImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.showsPageCarousel .bandsCarousel .centerImageTextShows {
+  position: absolute;
+  top: 5%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+}
+
+.showAudioContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.showAudioContainer .showAudioCard {
+  max-width: 30%;
+  display: flex;
+  flex-direction: column;
+  background-color: #d2b48c;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  min-height: 400px;
+}
+.showAudioContainer .showAudioCard .audioContainer {
+  display: flex;
+  max-width: 100%;
+  justify-content: center;
+}
+.showAudioContainer .showAudioCard .audioContainer .audioControls {
+  max-width: 100%;
+  margin: 0.5rem;
+  margin-top: 3rem;
+}
+
+@media (max-width: 1080px) {
+  .showsPageCarousel {
+    width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%);
+    height: 500px;
+  }
+  .showsPageCarousel #carouselBand2 {
+    margin-top: 0rem;
+    width: 100%;
+  }
+  .showsPageCarousel #carouselBand2 .showImage {
+    width: 100%;
+    height: 500px;
+  }
+  .showsPageCarousel #carouselBand2 .centerImageTextShows {
+    font-size: 20px;
+    left: 25%;
+  }
+  .showAudioContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    font-size: 16px;
+  }
+  .showAudioContainer .showAudioCard {
+    max-width: 100%;
+    padding: 1rem;
+    min-height: 300px;
+  }
+  .showAudioContainer .showAudioCard .audioContainer {
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+  }
+  .showAudioContainer .showAudioCard .audioContainer .audioControls {
+    max-width: 100%;
+    margin: 0.5rem;
+    margin-top: 3rem;
+  }
+}
+@media (max-width: 768px) {
+  .showAudioContainer .showAudioCard {
+    max-width: 100%;
+    padding: 1rem;
+    min-height: 400px;
+  }
+  .showsPageCarousel {
+    width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%);
+    height: 500px;
+  }
+  .showsPageCarousel #carouselBand2 {
+    margin-top: 0rem;
+    width: 100%;
+  }
+  .showsPageCarousel #carouselBand2 .showImage {
+    width: initial;
+    height: 500px;
+  }
+  .showsPageCarousel #carouselBand2 .centerImageTextShows {
+    font-size: 20px;
+    left: 25%;
+  }
+}
+* {
+  margin: 0;
+  scroll-behavior: smooth;
 }
 
 /*# sourceMappingURL=styles.css.map */

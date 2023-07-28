@@ -1,0 +1,44 @@
+@import "../mixins/mixins";
+
+.contactForm {
+  @include flexCenter(column, center, center, 1rem, 0);
+  background-color: #d2b48c;
+  border-radius: 5px;
+  .contactInputs {
+    @include flexCenter(row, null, null, 0, 0);
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .submitMailContainer {
+    @include flexCenter(row, end, null, 0, 0);
+    width: 100%;
+  }
+}
+
+.sectionHomeAddOnContact {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  max-height: 400px;
+}
+
+@media (max-width: 1080px) {
+  .sectionHomeAddOnContact {
+    max-height: 600px;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactForm {
+    flex-direction: column;
+    .contactInputs {
+      width: 100%;
+      flex-direction: column;
+      flex-wrap: wrap;
+      .contactFormInputs {
+        width: 100%;
+      }
+    }
+  }
+}

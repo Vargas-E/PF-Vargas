@@ -14,7 +14,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-dark navbar-expand-md">
+        <nav class="navbar navbar-dark navbar-expand-md navBar">
             <a href="../index.html"><img class="logo" src="../assets/images/coffee_logo.png"></a>
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
                 <span class="navbar-toggler-icon"></span>
@@ -46,30 +46,30 @@
             <div class="centerImageText">The most delicious coffee in town, now just one click away</div>
         </div>
         <div class="homeBody">
-            <div class="genericContainer">You can contact us to ask more information about our products and services by
+            <h3 class="genericContainer">You can contact us to ask more information about our products and services by
                 mail. We are always at your disposal!
-            </div>
-            <!-- <section class="contactFormContainer"> -->
-            <form class="contactForm">
-                <div>
-                    <div class="contactInputs">
-                        <div class="contactFormInputs">
-                            <label for="fname">Full name:</label><br>
-                            <input type="text" id="fname" name="fname"><br>
-                            <label for="email">Email:</label><br>
-                            <input type="text" id="email" name="email"><br>
+            </h3>
+            <section>
+                <form class="contactForm">
+                    <div>
+                        <div class="contactInputs">
+                            <div class="contactFormInputs">
+                                <label for="fname">Full name:</label><br>
+                                <input type="text" id="fname" name="fname"><br>
+                                <label for="email">Email:</label><br>
+                                <input type="text" id="email" name="email"><br>
+                            </div>
+                            <div>
+                                <label for="msg">Message:</label><br>
+                                <textarea id="msg" name="msg" rows="15" cols="50"></textarea>
+                            </div>
                         </div>
-                        <div class="contactFormMsg">
-                            <label for="msg">Message:</label><br>
-                            <textarea  id="msg" name="msg" rows="15" cols="50"></textarea>
+                        <div class="submitMailContainer">
+                            <input class="coffeeButton" type="submit" value="Submit">
                         </div>
                     </div>
-                    <div class="submitMailContainer">
-                        <input class="coffeeButton" type="submit" value="Submit">
-                    </div>
-                </div>
-            </form>
-            <!-- </section> -->
+                </form>
+            </section>
             <h3 class="genericContainer">Or you can visit us too! We'll answer your questions while you enjoy some good
                 coffee.</h3>
             <section class="sectionHomeIntro sectionHomeAddOnContact">

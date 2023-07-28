@@ -7,14 +7,14 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-   integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
    <link rel="stylesheet" href="./css/styles.css">
    <title>Home</title>
 </head>
 
 <body>
    <header>
-      <nav  class="navbar navbar-expand-md">
+      <nav class="navbar navbar-expand-md navBar">
          <a href="./index.html"><img class="logo" src="./assets/images/coffee_logo.png"></a>
          <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
             <span class="navbar-toggler-icon"></span>
@@ -66,28 +66,24 @@
             </div>
             <img class="sectionHomePicture" src="./assets/images/coffee_shop1.webp" />
          </section>
-         <section class="buttonContainer">
-            <div class="buttonContainerText">
-               <div>
-                  Current and upcoming shows:
-               </div>
-            </div>
+         <section class="genericContainer--button">
+            Current and upcoming shows:
             <div class="seeMoreCoffee">
                <a href="./pages/shows.html" class="coffeeButton">See more</a>
             </div>
          </section>
          <section class="showsContainer">
-            <div class="genericContainer showDesc1 normalizeMarginGrid fixFlex">
+            <div class="genericContainer--fixMargin showDesc1">
                <h5><b>Whispering Breezes</b></h5>
                <h5>Live show date: 01/01/23 22pm</h5>
                <h5 class="soldOut">Sold out!!!</h5>
             </div>
-            <div class="genericContainer showDesc2 normalizeMarginGrid fixFlex">
+            <div class="genericContainer--fixMargin showDesc2">
                <h5><b>The Midnight Sparrows</b></h5>
                <h5>Live show date: 01/07/23 22pm</h5>
                <h5>Tickets available!</h5>
             </div>
-            <div class="genericContainer showDesc3 normalizeMarginGrid fixFlex">
+            <div class="genericContainer--fixMargin showDesc3 ">
                <h5><b>Luminary Echoes</b></h5>
                <h5>Live show date: 01/14/23 22pm</h5>
                <h5>Tickets available!</h5>
@@ -121,21 +117,19 @@
                      </div>
                   </div>
                </div>
-               <button class="carousel-control-prev" type="button" data-bs-target="#carouselBand" data-bs-slide="prev">
+               <button class="carousel-control-prev carouselArrow" type="button" data-bs-target="#carouselBand" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
                </button>
-               <button class="carousel-control-next" type="button" data-bs-target="#carouselBand" data-bs-slide="next">
+               <button class="carousel-control-next carouselArrow" type="button" data-bs-target="#carouselBand" data-bs-slide="next">
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                </button>
             </div>
          </section>
-         <section class="buttonContainer">
-            <div class="buttonContainerText">
-               <div>
-                  Check some of our products:
-               </div>
+         <section class="genericContainer--button">
+            <div>
+               Check some of our products:
             </div>
             <div class="seeMoreCoffee">
                <a href="./pages/products.html" class="coffeeButton">See more</a>
@@ -307,11 +301,11 @@
                   </div>
                </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+            <button class="carousel-control-prev carouselArrow" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+            <button class="carousel-control-next carouselArrow" type="button" data-bs-target="#carousel1" data-bs-slide="next">
                <span class="carousel-control-next-icon" aria-hidden="true"></span>
                <span class="visually-hidden">Next</span>
             </button>
@@ -502,11 +496,11 @@
                   </div>
                </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+            <button class="carousel-control-prev carouselArrow" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
+            <button class="carousel-control-next carouselArrow" type="button" data-bs-target="#carousel2" data-bs-slide="next">
                <span class="carousel-control-next-icon" aria-hidden="true"></span>
                <span class="visually-hidden">Next</span>
             </button>
@@ -737,11 +731,11 @@
                   </div>
                </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
+            <button class="carousel-control-prev carouselArrow" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel3" data-bs-slide="next">
+            <button class="carousel-control-next carouselArrow" type="button" data-bs-target="#carousel3" data-bs-slide="next">
                <span class="carousel-control-next-icon" aria-hidden="true"></span>
                <span class="visually-hidden">Next</span>
             </button>
@@ -787,8 +781,8 @@
          @2023 Vargas Iván Ezequiel
       </div>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-      crossorigin="anonymous"></script>
+         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+         crossorigin="anonymous"></script>
    </footer>
 </body>
 

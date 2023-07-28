@@ -1,0 +1,214 @@
+@import "../mixins/mixins";
+
+@import "../reusableComponents/components";
+
+.productOptionsFormContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  .productsForm {
+    min-width: 20vw;
+    padding: 1rem;
+    margin-right: 1rem;
+    background-color: #d2b48c;
+    height: 50vh;
+    position: sticky;
+    top: 2vh;
+    border-radius: 5px;
+    .formItems {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .sliderContainer {
+      width: 100%;
+      .slider {
+        appearance: none;
+        width: 100%;
+        background: #bd1d15;
+        -webkit-transition: 0.2s;
+        transition: opacity 0.2s;
+        border-radius: 5px;
+      }
+    }
+    .finishProducts {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      width: 90%;
+    }
+    .buttonLink {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .coffeeList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+
+    .productType {
+      display: flex;
+      justify-content: center;
+      .coffeeButtonProductsPage {
+        margin-top: 5px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.modalWindow {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  visibility: hidden;
+  .modalButton {
+    @include flexCenter(row, center, center, auto, auto);
+    position: absolute;
+    bottom: 2rem;
+    width: 80%;
+  }
+  &:target {
+    margin-top: 5rem;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    width: 400px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    background-color: #d2b48c;
+    border: 2px solid black;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .productOptionsFormContainer {
+    flex-direction: column;
+    .productsForm {
+      margin: 1rem 0 1rem 0;
+      top: initial;
+      max-height: 40vh;
+      .formItems {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .sliderContainer {
+        width: 100%;
+        .slider {
+          appearance: none;
+          width: 100%;
+          background: #bd1d15;
+          -webkit-transition: 0.2s;
+          transition: opacity 0.2s;
+          border-radius: 5px;
+        }
+      }
+      .finishProducts {
+        position: absolute;
+        bottom: 1rem;
+        width: 90%;
+      }
+      .buttonLink {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .coffeeList {
+      .fixWidth {
+        max-width: 250px;
+        .imageFixProducts {
+          width: 250px;
+        }
+      }
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      .productType {
+        display: flex;
+        justify-content: center;
+        .coffeeButtonProductsPage {
+          margin-top: 5px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .productOptionsFormContainer {
+    .coffeeList {
+      .fixWidth {
+        max-width: 400px;
+        .imageFixProducts {
+          width: 400px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .productOptionsFormContainer {
+    flex-direction: column;
+    .productsForm {
+      margin: 1rem 0 1rem 0;
+      top: initial;
+      max-height: 40vh;
+      .formItems {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .sliderContainer {
+        width: 100%;
+        .slider {
+          appearance: none;
+          width: 100%;
+          background: #bd1d15;
+          -webkit-transition: 0.2s;
+          transition: opacity 0.2s;
+          border-radius: 5px;
+        }
+      }
+      .finishProducts {
+        position: absolute;
+        bottom: 1rem;
+        width: 90%;
+      }
+      .buttonLink {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .coffeeList {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      .productType {
+        display: flex;
+        justify-content: center;
+        .coffeeButtonProductsPage {
+          margin-top: 5px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

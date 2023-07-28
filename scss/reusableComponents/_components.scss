@@ -1,0 +1,198 @@
+@import "../mixins/mixins";
+
+body {
+  background-image: url("../assets/images/background_final.jpg");
+  width: 100%;
+  font-family: "Lato";
+  z-index: 0;
+}
+
+.homeBody {
+  @include flexCenter(column, null, null, 0 1rem 0 1rem, auto);
+  max-width: 1200px;
+}
+
+.primaryImageContainer {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  font-style: italic;
+  .centerImageText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .centerImage {
+    width: 100vw;
+    height: 400px;
+    object-fit: cover;
+  }
+}
+
+footer {
+  @include flexCenter(column, center, center, 4rem 0 2rem 0, auto);
+  background-color: #1e1e1e;
+  color: white;
+  .socialLinkIcons {
+    @include flexCenter(row, space-around, center, auto, auto auto 1rem auto);
+    width: 20%;
+  }
+  .socialLinkIcon {
+    width: 30px;
+  }
+}
+
+.navBar {
+  background-color: #1e1e1e;
+  --bs-navbar-padding-y: 0;
+  --bs-navbar-hover-color: #bd1d15;
+  --bs-navbar-color: white;
+  .navbar-expand-md {
+    justify-content: flex-end;
+  }
+  .logo {
+    background-color: #d2b48c;
+    height: 70px;
+  }
+  .navbar-collapse {
+    justify-content: flex-end;
+  }
+  .nav-link.disabled {
+    color: #bd1d15;
+  }
+}
+
+.genericContainer {
+  @include flexCenter(column, null, null, 1rem, 2rem 0 1rem 0);
+  background-color: #d2b48c;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.genericContainer--button {
+  @extend .genericContainer;
+  @include flexCenter(row, space-between, center, 1rem, 1rem 0 0 0);
+}
+
+.genericContainer--fixMargin {
+  @extend .genericContainer;
+  margin: 0;
+}
+
+.coffeeButton {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.5rem;
+  background-color: #1e1e1e;
+  color: #f2f2f2;
+  vertical-align: middle;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.coffeeButton--bottom {
+  @extend .coffeeButton;
+  @include flexCenter(row, center, center, 0.5rem, 0rem);
+  width: 100%;
+}
+
+.coffeeCard {
+  max-width: 200px;
+  margin: 1.5rem;
+  .coffeeImage {
+    width: 200px;
+    object-fit: cover;
+    display: inline-block;
+    border-radius: 5px 5px 0 0;
+  }
+  .coffeeDesc {
+    padding: 1rem;
+    background-color: #d2b48c;
+    border-radius: 0 0 5px 5px;
+  }
+}
+
+.float {
+  z-index: 10;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #1e1e1e;
+  color: #fff;
+  border-radius: 50px;
+  border: 1px solid #d2b48c;
+  text-align: center;
+  text-decoration: none;
+  font-size: 40px;
+  &:hover {
+    visibility: visible;
+    .tooltipText {
+      visibility: visible;
+    }
+  }
+  .tooltipText {
+    font-weight: bold;
+    font-size: 10px;
+    visibility: hidden;
+    position: fixed;
+    bottom: 105px;
+    right: 20px;
+    width: 100px;
+    background-color: #1e1e1e;
+    color: #d2b48c;
+    text-align: center;
+    padding: 5px 0;
+    z-index: 1;
+  }
+}
+
+a div {
+  padding-top: 0.5rem;
+}
+
+.carouselArrow {
+    background-color: #d2b48c;
+    border-radius: 5px;
+    width: 5%;
+}
+
+@media (max-width: 1080px) {
+  body {
+    font-size: 12px;
+  }
+
+  footer {
+    .socialLinkIcons {
+      width: 40%;
+    }
+  }
+
+  .genericContainer {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    .socialLinkIcons {
+      width: 60%;
+    }
+  }
+
+  .genericContainer {
+    font-size: 14px;
+  }
+
+  .float {
+    bottom: 25px;
+    right: 20px;
+    font-size: 40px;
+    .tooltipText {
+      visibility: hidden;
+    }
+  }
+}

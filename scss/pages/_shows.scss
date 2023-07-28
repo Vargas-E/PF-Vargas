@@ -1,0 +1,120 @@
+.showsPageCarousel {
+  margin: 2rem 0 2rem 0;
+  .bandsCarousel {
+    margin-top: 0rem;
+    width: 100%;
+    .showImage {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .centerImageTextShows {
+      position: absolute;
+      top: 5%;
+      left: 15%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.showAudioContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  .showAudioCard {
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+    background-color: #d2b48c;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+    min-height: 400px;
+    .audioContainer {
+      display: flex;
+      max-width: 100%;
+      justify-content: center;
+      .audioControls {
+        max-width: 100%;
+        margin: 0.5rem;
+        margin-top: 3rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  .showsPageCarousel {
+    width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%);
+    height: 500px;
+    #carouselBand2 {
+      margin-top: 0rem;
+      width: 100%;
+      .showImage {
+        width: 100%;
+        height: 500px;
+      }
+      .centerImageTextShows {
+        font-size: 20px;
+        left: 25%;
+      }
+    }
+  }
+
+  .showAudioContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    font-size: 16px;
+    .showAudioCard {
+      max-width: 100%;
+      padding: 1rem;
+      min-height: 300px;
+      .audioContainer {
+        display: flex;
+        max-width: 100%;
+        justify-content: center;
+        .audioControls {
+          max-width: 100%;
+          margin: 0.5rem;
+          margin-top: 3rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .showAudioContainer {
+    .showAudioCard {
+      max-width: 100%;
+      padding: 1rem;
+      min-height: 400px;
+    }
+  }
+
+  .showsPageCarousel {
+    width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%);
+    height: 500px;
+    #carouselBand2 {
+      margin-top: 0rem;
+      width: 100%;
+      .showImage {
+        width: initial;
+        height: 500px;
+      }
+      .centerImageTextShows {
+        font-size: 20px;
+        left: 25%;
+      }
+    }
+  }
+}
