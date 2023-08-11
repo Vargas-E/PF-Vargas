@@ -260,7 +260,6 @@ a div {
   font-size: 24px;
 }
 
-/**/
 @media (max-width: 1080px) {
   body {
     font-size: 12px;
@@ -809,7 +808,6 @@ a div {
   font-size: 24px;
 }
 
-/**/
 @media (max-width: 1080px) {
   body {
     font-size: 12px;
@@ -962,6 +960,7 @@ a div {
 
 .modalWindow {
   position: fixed;
+  margin-top: 2rem;
   top: 0;
   right: 0;
   bottom: 0;
@@ -1428,7 +1427,6 @@ a div {
   font-size: 24px;
 }
 
-/**/
 @media (max-width: 1080px) {
   body {
     font-size: 12px;
