@@ -48,15 +48,24 @@
 
 @media (max-width: 1080px) {
   .showsPageCarousel {
+    &:hover {
+      -webkit-transform: none;
+      -moz-transform: none;
+      -ms-transform: none;
+      transform: none;
+  }
+    margin-left: auto;
+    margin-right: auto;
     width: 100vw;
     position: relative;
     left: calc(-50vw + 50%);
     height: 500px;
     #carouselBand2 {
       margin-top: 0rem;
-      width: 100%;
+      width: 100vw;
       .showImage {
-        width: 100%;
+        overflow: hidden;
+        width: 100vw;
         height: 500px;
       }
       .centerImageTextShows {
