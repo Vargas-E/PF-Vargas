@@ -36,6 +36,9 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.primaryImageContainer .centerImageText:hover {
+  cursor: default;
+}
 .primaryImageContainer .centerImage {
   width: 100%;
   height: 400px;
@@ -51,6 +54,9 @@ footer {
   margin: auto;
   background-color: #1e1e1e;
   color: white;
+}
+footer:hover {
+  cursor: default;
 }
 footer .socialLinkIcons {
   display: flex;
@@ -584,6 +590,9 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.primaryImageContainer .centerImageText:hover {
+  cursor: default;
+}
 .primaryImageContainer .centerImage {
   width: 100%;
   height: 400px;
@@ -599,6 +608,9 @@ footer {
   margin: auto;
   background-color: #1e1e1e;
   color: white;
+}
+footer:hover {
+  cursor: default;
 }
 footer .socialLinkIcons {
   display: flex;
@@ -1203,6 +1215,9 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.primaryImageContainer .centerImageText:hover {
+  cursor: default;
+}
 .primaryImageContainer .centerImage {
   width: 100%;
   height: 400px;
@@ -1218,6 +1233,9 @@ footer {
   margin: auto;
   background-color: #1e1e1e;
   color: white;
+}
+footer:hover {
+  cursor: default;
 }
 footer .socialLinkIcons {
   display: flex;

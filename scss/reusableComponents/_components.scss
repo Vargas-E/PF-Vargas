@@ -21,7 +21,11 @@ body {
   color: $buttonColor;
   font-size: 25px;
   font-style: italic;
+  
   .centerImageText {
+    &:hover {
+      cursor:default;
+    }
     border-radius: 10px;
     background-color:  #cea16696;
     position: absolute;
@@ -40,6 +44,9 @@ footer {
   @include flexCenter(column, center, center, 4rem 0 2rem 0, auto);
   background-color: $buttonColor;
   color: $imageTextColor;
+  &:hover {
+    cursor:default;
+  }
   .socialLinkIcons {
     @include flexCenter(row, space-around, center, auto, auto auto 1rem auto);
     width: 20%;
