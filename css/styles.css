@@ -962,6 +962,7 @@ a div {
   justify-content: center;
 }
 .productOptionsFormContainer .coffeeList .productType {
+  position: relative;
   display: flex;
   justify-content: center;
 }
@@ -969,7 +970,31 @@ a div {
   margin-top: 5px;
   width: 100%;
 }
+.productOptionsFormContainer .coffeeList .productType:active .snackBar, .productOptionsFormContainer .coffeeList .productType:focus .snackBar {
+  opacity: 1;
+  z-index: 0;
+}
+.productOptionsFormContainer .coffeeList .productType .snackBar {
+  padding: 1rem;
+  position: absolute;
+  top: -230px;
+  right: 10;
+  opacity: 0;
+  border: 1px solid black;
+  background-color: #1e1e1e;
+  color: white;
+  border-radius: 5px;
+  z-index: -99;
+}
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .modalWindow {
   position: fixed;
   margin-top: 2rem;
