@@ -6,6 +6,8 @@
 /* transformation. Put in css component with transitionSet with &:trigger to use*/
 body {
   background-image: url("../assets/images/background_final.webp");
+  background-size: contain;
+  backdrop-filter: saturate(5px);
   width: 100%;
   font-family: "Lato";
   z-index: 0;
@@ -109,14 +111,18 @@ footer .socialLinkIcon {
 }
 
 .coffeeButton, .coffeeButton--bottom {
+  transition: all 0.2s ease-in-out;
+  background-color: #1e1e1e;
+  color: #f2f2f2;
   border: 1px solid black;
   border-radius: 5px;
   padding: 0.5rem;
-  background-color: #1e1e1e;
-  color: #f2f2f2;
   vertical-align: middle;
   cursor: pointer;
   text-decoration: none;
+}
+.coffeeButton:hover, .coffeeButton--bottom:hover {
+  color: #bd1d15;
 }
 
 .coffeeButton--bottom {
@@ -129,21 +135,52 @@ footer .socialLinkIcon {
   width: 100%;
 }
 
-.coffeeCard {
+.coffeeCard, .coffeeCard--space-responsive {
   transition: all 0.5s ease-in-out;
-  max-width: 200px;
-  margin: 1.5rem;
+  max-width: 230px;
+  margin: 0.5rem;
 }
-.coffeeCard:hover {
+.coffeeCard:hover, .coffeeCard--space-responsive:hover, .coffeeCard:active, .coffeeCard--space-responsive:active {
   transform: scale(1.05, 1.05);
 }
-.coffeeCard .coffeeImage {
-  width: 200px;
-  object-fit: cover;
-  display: inline-block;
+.coffeeCard .coffeeProductImageContainer, .coffeeCard--space-responsive .coffeeProductImageContainer {
+  position: relative;
   border-radius: 5px 5px 0 0;
+  text-align: center;
+  height: 300px;
+  width: 230px;
 }
-.coffeeCard .coffeeDesc {
+.coffeeCard .coffeeProductImageContainer .coffeeImage, .coffeeCard--space-responsive .coffeeProductImageContainer .coffeeImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px 5px 0 0;
+  object-fit: cover;
+}
+.coffeeCard .coffeeProductImageContainer .coffeeProductImageDesc, .coffeeCard--space-responsive .coffeeProductImageContainer .coffeeProductImageDesc {
+  border-radius: 5px 5px 0 0;
+  padding: 1rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: black;
+  color: white;
+  font-family: sans-serif;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.coffeeCard .coffeeProductImageContainer .coffeeProductImageDesc:hover, .coffeeCard--space-responsive .coffeeProductImageContainer .coffeeProductImageDesc:hover {
+  visibility: visible;
+  opacity: 0.8;
+}
+.coffeeCard .coffeeDesc, .coffeeCard--space-responsive .coffeeDesc {
+  font-weight: bold;
+  text-align: center;
   padding: 1rem;
   background-color: #d2b48c;
   border-radius: 0 0 5px 5px;
@@ -187,12 +224,6 @@ footer .socialLinkIcon {
 
 a div {
   padding-top: 0.5rem;
-}
-
-.carouselArrow {
-  background-color: #d2b48c;
-  border-radius: 5px;
-  width: 5%;
 }
 
 /**/
@@ -245,6 +276,10 @@ a div {
     left: 15%;
     font-size: 24px;
   }
+  .coffeeCard--space-responsive {
+    margin-right: 4rem;
+    margin-left: 4rem;
+  }
 }
 @media (max-width: 768px) {
   footer .socialLinkIcons {
@@ -282,6 +317,25 @@ a div {
   .imageContainer .carouselImageText--corner {
     left: 50%;
     font-size: 24px;
+  }
+  .coffeeCard, .coffeeCard--space-responsive {
+    min-width: 100%;
+  }
+  .coffeeCard .coffeeProductImageContainer, .coffeeCard--space-responsive .coffeeProductImageContainer {
+    width: 100%;
+  }
+  .coffeeCard .coffeeProductImageContainer .coffeeImage, .coffeeCard--space-responsive .coffeeProductImageContainer .coffeeImage {
+    width: 100%;
+    height: 100%;
+  }
+  .coffeeCard--space-responsive {
+    height: 100%;
+  }
+  .carouselArrow {
+    background-color: transparent;
+    width: 30px;
+    color: black;
+    margin-bottom: 1rem;
   }
 }
 /* general use flex with general usage properties */
@@ -358,6 +412,8 @@ a div {
 .carousel .carousel-inner .coffeeListCarousel {
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
 .midScreen {
@@ -479,6 +535,8 @@ a div {
 /* transformation. Put in css component with transitionSet with &:trigger to use*/
 body {
   background-image: url("../assets/images/background_final.webp");
+  background-size: contain;
+  backdrop-filter: saturate(5px);
   width: 100%;
   font-family: "Lato";
   z-index: 0;
@@ -582,14 +640,18 @@ footer .socialLinkIcon {
 }
 
 .coffeeButton, .coffeeButton--bottom {
+  transition: all 0.2s ease-in-out;
+  background-color: #1e1e1e;
+  color: #f2f2f2;
   border: 1px solid black;
   border-radius: 5px;
   padding: 0.5rem;
-  background-color: #1e1e1e;
-  color: #f2f2f2;
   vertical-align: middle;
   cursor: pointer;
   text-decoration: none;
+}
+.coffeeButton:hover, .coffeeButton--bottom:hover {
+  color: #bd1d15;
 }
 
 .coffeeButton--bottom {
@@ -602,21 +664,52 @@ footer .socialLinkIcon {
   width: 100%;
 }
 
-.coffeeCard {
+.coffeeCard, .coffeeCard--space-responsive {
   transition: all 0.5s ease-in-out;
-  max-width: 200px;
-  margin: 1.5rem;
+  max-width: 230px;
+  margin: 0.5rem;
 }
-.coffeeCard:hover {
+.coffeeCard:hover, .coffeeCard--space-responsive:hover, .coffeeCard:active, .coffeeCard--space-responsive:active {
   transform: scale(1.05, 1.05);
 }
-.coffeeCard .coffeeImage {
-  width: 200px;
-  object-fit: cover;
-  display: inline-block;
+.coffeeCard .coffeeProductImageContainer, .coffeeCard--space-responsive .coffeeProductImageContainer {
+  position: relative;
   border-radius: 5px 5px 0 0;
+  text-align: center;
+  height: 300px;
+  width: 230px;
 }
-.coffeeCard .coffeeDesc {
+.coffeeCard .coffeeProductImageContainer .coffeeImage, .coffeeCard--space-responsive .coffeeProductImageContainer .coffeeImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px 5px 0 0;
+  object-fit: cover;
+}
+.coffeeCard .coffeeProductImageContainer .coffeeProductImageDesc, .coffeeCard--space-responsive .coffeeProductImageContainer .coffeeProductImageDesc {
+  border-radius: 5px 5px 0 0;
+  padding: 1rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: black;
+  color: white;
+  font-family: sans-serif;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.coffeeCard .coffeeProductImageContainer .coffeeProductImageDesc:hover, .coffeeCard--space-responsive .coffeeProductImageContainer .coffeeProductImageDesc:hover {
+  visibility: visible;
+  opacity: 0.8;
+}
+.coffeeCard .coffeeDesc, .coffeeCard--space-responsive .coffeeDesc {
+  font-weight: bold;
+  text-align: center;
   padding: 1rem;
   background-color: #d2b48c;
   border-radius: 0 0 5px 5px;
@@ -660,12 +753,6 @@ footer .socialLinkIcon {
 
 a div {
   padding-top: 0.5rem;
-}
-
-.carouselArrow {
-  background-color: #d2b48c;
-  border-radius: 5px;
-  width: 5%;
 }
 
 /**/
@@ -718,6 +805,10 @@ a div {
     left: 15%;
     font-size: 24px;
   }
+  .coffeeCard--space-responsive {
+    margin-right: 4rem;
+    margin-left: 4rem;
+  }
 }
 @media (max-width: 768px) {
   footer .socialLinkIcons {
@@ -755,6 +846,25 @@ a div {
   .imageContainer .carouselImageText--corner {
     left: 50%;
     font-size: 24px;
+  }
+  .coffeeCard, .coffeeCard--space-responsive {
+    min-width: 100%;
+  }
+  .coffeeCard .coffeeProductImageContainer, .coffeeCard--space-responsive .coffeeProductImageContainer {
+    width: 100%;
+  }
+  .coffeeCard .coffeeProductImageContainer .coffeeImage, .coffeeCard--space-responsive .coffeeProductImageContainer .coffeeImage {
+    width: 100%;
+    height: 100%;
+  }
+  .coffeeCard--space-responsive {
+    height: 100%;
+  }
+  .carouselArrow {
+    background-color: transparent;
+    width: 30px;
+    color: black;
+    margin-bottom: 1rem;
   }
 }
 .productOptionsFormContainer {
@@ -903,7 +1013,6 @@ a div {
     justify-content: center;
   }
   .productOptionsFormContainer .coffeeList .productType .coffeeButtonProductsPage {
-    margin-top: 5px;
     width: 100%;
   }
 }
@@ -1024,6 +1133,8 @@ a div {
 /* transformation. Put in css component with transitionSet with &:trigger to use*/
 body {
   background-image: url("../assets/images/background_final.webp");
+  background-size: contain;
+  backdrop-filter: saturate(5px);
   width: 100%;
   font-family: "Lato";
   z-index: 0;
@@ -1127,14 +1238,18 @@ footer .socialLinkIcon {
 }
 
 .coffeeButton, .coffeeButton--bottom {
+  transition: all 0.2s ease-in-out;
+  background-color: #1e1e1e;
+  color: #f2f2f2;
   border: 1px solid black;
   border-radius: 5px;
   padding: 0.5rem;
-  background-color: #1e1e1e;
-  color: #f2f2f2;
   vertical-align: middle;
   cursor: pointer;
   text-decoration: none;
+}
+.coffeeButton:hover, .coffeeButton--bottom:hover {
+  color: #bd1d15;
 }
 
 .coffeeButton--bottom {
@@ -1147,21 +1262,52 @@ footer .socialLinkIcon {
   width: 100%;
 }
 
-.coffeeCard {
+.coffeeCard, .coffeeCard--space-responsive {
   transition: all 0.5s ease-in-out;
-  max-width: 200px;
-  margin: 1.5rem;
+  max-width: 230px;
+  margin: 0.5rem;
 }
-.coffeeCard:hover {
+.coffeeCard:hover, .coffeeCard--space-responsive:hover, .coffeeCard:active, .coffeeCard--space-responsive:active {
   transform: scale(1.05, 1.05);
 }
-.coffeeCard .coffeeImage {
-  width: 200px;
-  object-fit: cover;
-  display: inline-block;
+.coffeeCard .coffeeProductImageContainer, .coffeeCard--space-responsive .coffeeProductImageContainer {
+  position: relative;
   border-radius: 5px 5px 0 0;
+  text-align: center;
+  height: 300px;
+  width: 230px;
 }
-.coffeeCard .coffeeDesc {
+.coffeeCard .coffeeProductImageContainer .coffeeImage, .coffeeCard--space-responsive .coffeeProductImageContainer .coffeeImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px 5px 0 0;
+  object-fit: cover;
+}
+.coffeeCard .coffeeProductImageContainer .coffeeProductImageDesc, .coffeeCard--space-responsive .coffeeProductImageContainer .coffeeProductImageDesc {
+  border-radius: 5px 5px 0 0;
+  padding: 1rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: black;
+  color: white;
+  font-family: sans-serif;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.coffeeCard .coffeeProductImageContainer .coffeeProductImageDesc:hover, .coffeeCard--space-responsive .coffeeProductImageContainer .coffeeProductImageDesc:hover {
+  visibility: visible;
+  opacity: 0.8;
+}
+.coffeeCard .coffeeDesc, .coffeeCard--space-responsive .coffeeDesc {
+  font-weight: bold;
+  text-align: center;
   padding: 1rem;
   background-color: #d2b48c;
   border-radius: 0 0 5px 5px;
@@ -1205,12 +1351,6 @@ footer .socialLinkIcon {
 
 a div {
   padding-top: 0.5rem;
-}
-
-.carouselArrow {
-  background-color: #d2b48c;
-  border-radius: 5px;
-  width: 5%;
 }
 
 /**/
@@ -1263,6 +1403,10 @@ a div {
     left: 15%;
     font-size: 24px;
   }
+  .coffeeCard--space-responsive {
+    margin-right: 4rem;
+    margin-left: 4rem;
+  }
 }
 @media (max-width: 768px) {
   footer .socialLinkIcons {
@@ -1300,6 +1444,25 @@ a div {
   .imageContainer .carouselImageText--corner {
     left: 50%;
     font-size: 24px;
+  }
+  .coffeeCard, .coffeeCard--space-responsive {
+    min-width: 100%;
+  }
+  .coffeeCard .coffeeProductImageContainer, .coffeeCard--space-responsive .coffeeProductImageContainer {
+    width: 100%;
+  }
+  .coffeeCard .coffeeProductImageContainer .coffeeImage, .coffeeCard--space-responsive .coffeeProductImageContainer .coffeeImage {
+    width: 100%;
+    height: 100%;
+  }
+  .coffeeCard--space-responsive {
+    height: 100%;
+  }
+  .carouselArrow {
+    background-color: transparent;
+    width: 30px;
+    color: black;
+    margin-bottom: 1rem;
   }
 }
 /* general use flex with general usage properties */
