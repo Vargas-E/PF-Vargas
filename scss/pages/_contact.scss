@@ -10,9 +10,14 @@
     gap: 1rem;
     flex-wrap: wrap;
   }
+  .contactFormInputs {
+    display: flex;
+    flex-direction: column;
+  }
   .submitMailContainer {
     @include flexCenter(row, end, null, 0, 0);
     width: 100%;
+    margin-top: 1rem;
   }
 }
 
