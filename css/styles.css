@@ -71,6 +71,26 @@ footer .socialLinkIcon {
   width: 30px;
 }
 
+.fb:hover {
+  filter: drop-shadow(2px 2px blue);
+}
+
+.ig:hover {
+  filter: drop-shadow(2px 2px orange);
+}
+
+.lkdn:hover {
+  filter: drop-shadow(2px 2px darkblue);
+}
+
+.twt:hover {
+  filter: drop-shadow(2px 2px #1DA1F2);
+}
+
+.wp:hover {
+  filter: drop-shadow(2px 2px green);
+}
+
 .navBar {
   background-color: #1e1e1e;
   --bs-navbar-padding-y: 0;
@@ -623,6 +643,26 @@ footer .socialLinkIcons {
 }
 footer .socialLinkIcon {
   width: 30px;
+}
+
+.fb:hover {
+  filter: drop-shadow(2px 2px blue);
+}
+
+.ig:hover {
+  filter: drop-shadow(2px 2px orange);
+}
+
+.lkdn:hover {
+  filter: drop-shadow(2px 2px darkblue);
+}
+
+.twt:hover {
+  filter: drop-shadow(2px 2px #1DA1F2);
+}
+
+.wp:hover {
+  filter: drop-shadow(2px 2px green);
 }
 
 .navBar {
@@ -1273,6 +1313,26 @@ footer .socialLinkIcons {
 }
 footer .socialLinkIcon {
   width: 30px;
+}
+
+.fb:hover {
+  filter: drop-shadow(2px 2px blue);
+}
+
+.ig:hover {
+  filter: drop-shadow(2px 2px orange);
+}
+
+.lkdn:hover {
+  filter: drop-shadow(2px 2px darkblue);
+}
+
+.twt:hover {
+  filter: drop-shadow(2px 2px #1DA1F2);
+}
+
+.wp:hover {
+  filter: drop-shadow(2px 2px green);
 }
 
 .navBar {
